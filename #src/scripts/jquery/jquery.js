@@ -3238,9 +3238,3 @@
         return C.$ === S && (C.$ = Gt), e && C.jQuery === S && (C.jQuery = Vt), S
     }, "undefined" == typeof e && (C.jQuery = C.$ = S), S
 });
-$(document).ready(function() {
-  $('.b-header__burger').click(function(event) {
-    $('.b-header__burger,.b-header__menu').toggleClass('active');
-    $('body').toggleClass('lock');
-  })
-});

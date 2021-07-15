@@ -1,0 +1,242 @@
+%linkHeader {
+  font-family: Exo2;
+  font-size: 12px;
+  line-height: 140.3%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+%burger {
+  content: "";
+  display: inline-block;
+  background-color: $colorWhite;
+  position: absolute;
+  z-index: 15;
+  width: 100%;
+  height: 3px;
+  left: 0;
+}
+body.lock {
+  overflow: hidden;
+  @media (min-width: $md3+px) {
+    overflow: visible;
+  }
+}
+.b-header {
+  // min-height: 40px;
+  background-color: $colorMain;
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  &__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $colorMain;
+    z-index: 7;
+  }
+
+  &__mainNav {
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $colorWhite;
+    width: 100%;
+  }
+
+  &__menu {
+    transition: all 0.00003s ease 0s;
+    //   @media (min-width: $md3+px) {
+    // }
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background-color: $colorMain;
+    overflow: auto;
+    @media (min-width: $md3+px) {
+      position: relative;
+      z-index: 15;
+      width: 100%;
+      min-height: 40px;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // width: 578/1160 * 100%;
+      flex: 0 0 578/1160 * 100%;
+      // min-height: 100%;
+      overflow: visible;
+    }
+  }
+  &__menu.active {
+    top: 0;
+    z-index: 15;
+  }
+  &__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 23px;
+    z-index: 16;
+
+    @media (min-width: $md3+px) {
+      display: none;
+    }
+  }
+
+  &__burger::before {
+    transition: all 0.3s ease 0s;
+    @extend %burger;
+    top: 0;
+  }
+  &__burger::after {
+    transition: all 0.3s ease 0s;
+    @extend %burger;
+    bottom: 0;
+  }
+  &__burger.active::before {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  &__burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 10px;
+  }
+  &__burger.active .b-header__burgerSpan {
+    transform: scale(0);
+  }
+  &__burgerSpan {
+    position: absolute;
+    z-index: 11;
+    background-color: $colorWhite;
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 10px;
+    transition: all 0.3s ease 0s;
+ 
+  }
+
+  &__menuList {
+    position: relative;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 35px 0;
+    @media (min-width: $md3+px) {
+      margin: 0;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__menuItem {
+    position: relative;
+    margin: 35px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: $md3+px) {
+      margin: 0px 5px;
+      padding: 5px 0px;
+    }
+  }
+
+  &__menuLink {
+    position: relative;
+    color: inherit;
+    @extend %linkHeader;
+  }
+
+  &__menuArrow {
+    color: inherit;
+    font-size: 8px;
+    margin: 0 0 0 5px;
+  }
+  &__menuSub {
+    // position: absolute;
+    // top: 34px;
+    // z-index: 11;
+  }
+
+  &__menuSub-list {
+    position: absolute;
+    top: 20px;
+    left: -50%;
+     z-index: 15;
+    width: 130px;
+    min-height: 150px;
+    // background-color: $colorMain;
+    background-color: rgb(180, 39, 39);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+         @media (min-width: $md3+px) {
+          top: 34px;
+    }
+  }
+
+  &__menuSub-item {
+    margin: 15px 0;
+  }
+
+  &__menuSub-link {
+    color: inherit;
+    @extend %linkHeader;
+  }
+
+  &__actions {
+    position: relative;
+    z-index: 15;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100%;
+  }
+
+  &__actionsItem {
+    display: flex;
+    align-items: center;
+  }
+  &__actionsItem:first-child {
+    padding-right: 20px;
+  }
+  &__actionsItem:last-child {
+    padding-left: 20px;
+    border-left: 1px solid $colorWhite;
+  }
+
+  &__icon {
+    color: inherit;
+    font-size: 20px;
+  }
+
+  &__actionsText {
+    margin: 0 0 0 10px;
+    color: inherit;
+    @extend %linkHeader;
+  }
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}

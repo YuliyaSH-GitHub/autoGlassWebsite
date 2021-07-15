@@ -9,8 +9,21 @@
   }
 }
 
+@import "variables";
 @import "fonts";
+@import "icons";
+@import "null";
+
 
 body {
-  font-size: 30px;
+  color: $colorMain;
+  
 }
+
+._container {
+	max-width: $maxWidthContainer + px;
+	padding: 0px 15px;
+	margin: 0 auto;
+}
+
+@import "bem/header.scss";
