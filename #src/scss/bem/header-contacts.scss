@@ -1,0 +1,265 @@
+%flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+body.lock {
+  overflow: hidden;
+  @media (min-width: $md3+px) {
+    overflow: visible;
+  }
+}
+.b-header {
+  &__contacts {
+    padding: 52px 0 15px 0;
+    @media (min-width: $md4+px) {
+      padding: 58px 0 18px 0;
+    }
+  }
+
+  &__contactsWrap {
+    @extend %flexSpaceBetween;
+    align-items: center;
+  }
+
+  &__contactItem {
+    &_logoFlex {
+      @extend %flexSpaceBetween;
+      align-items: center;
+      max-width: 307px;
+    }
+    &_flex {
+      @extend %flexSpaceBetween;
+    }
+    &_placeNone {
+      display: none;
+      @media (min-width: $md2+px) {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &_scheduleNone {
+      display: none;
+      @media (min-width: $md4+px) {
+        display: block;
+      }
+    }
+    &_phoneFlex {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+  &__contactItem:not(:last-child) {
+    margin: 0 7px 0 0;
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 17px 0 0;
+  }
+
+  &__logoImg {
+    transition: width 0.8s ease 0s;
+    display: block;
+    width: 50px;
+    height: 27px;
+    object-fit: cover;
+    object-position: center;
+    @media (min-width: $md4+px) {
+      width: 89px;
+      height: 49px;
+    }
+  }
+
+  &__nameСompany {
+    transition: font-size 0.8s ease 0s;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 10px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $colorDarkBlue;
+    text-align: center;
+    @media (min-width: $md4+px) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__contactText {
+    font-size: 14px;
+    line-height: 147.3%;
+    display: none;
+    @media (min-width: $md3+px) {
+      display: block;
+      flex: 0 0 190px;
+    }
+  }
+
+  &__placeIcon {
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+    margin: 0 12px 0 0;
+    display: none;
+    @media (min-width: $md2+px) {
+      display: block;
+    }
+  }
+
+  &__place {
+    text-align: left;
+    display: block;
+    font-size: 10px;
+    line-height: 12px;
+    &_red {
+      color: $colorOrange;
+    }
+    @media (min-width: $md4+px) {
+      font-size: 12px;
+      line-height: 140.3%;
+    }
+    @media (min-width: $md2+px) {
+      font-size: 14px;
+      line-height: 147.3%;
+    }
+  }
+  &__place:first-child {
+    color: $colorGrey;
+  }
+  &__schedule {
+    display: block;
+    font-size: 12px;
+    line-height: 140.3%;
+    @media (min-width: $md3+px) {
+      font-size: 14px;
+    }
+  }
+
+  &__phoneFlexDiv {
+    @extend %flexSpaceBetween;
+  }
+
+  &__phone {
+    position: relative;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140.3%;
+    text-align: right;
+    text-transform: uppercase;
+    color: inherit;
+    flex: 0 0 105px;
+    @media (min-width: $md4+px) {
+      font-size: 16px;
+      flex: 0 0 142px;
+    }
+
+    @media (min-width: $md2+px) {
+      font-size: 18px;
+      flex: 0 0 160px;
+    }
+  }
+  &__menuPhone {
+    position: relative;
+    top: 4px;
+    margin-left: 5px;
+    @media (min-width: $md4+px) {
+      top: 6px;
+      margin-left: 7px;
+    }
+    @media (min-width: $md2+px) {
+      top: 7px;
+    }
+  }
+
+  &__menuPhoneArrow {
+    transition: font-size 0.8s ease 0s;
+    font-size: 9px;
+    @media (min-width: $md4+px) {
+      font-size: 10px;
+    }
+    @media (min-width: $md2+px) {
+      font-size: 13px;
+    }
+  }
+
+  &__menuPhone-list {
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 5px;
+    width: 160px;
+    background-color: $colorMain;
+    color: $colorWhite;
+    margin: 10px 0;
+  }
+
+  &__menuPhone-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  &__menuPhone-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140.3%;
+    text-align: right;
+    text-transform: uppercase;
+    color: inherit;
+  }
+
+  &__whatsAppWrap {
+    @extend %flexSpaceBetween;
+  }
+
+  &__whatsApp {
+    margin: 6px 0 0 0;
+    flex: 0 0 105px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 140.3%;
+    text-align: right;
+    text-decoration-line: underline;
+    color: inherit;
+    @media (min-width: $md4+px) {
+      font-size: 12px;
+      text-decoration: none;
+      flex: 0 0 123px;
+      margin: 6px 0 4px 0;
+    }
+    @media (min-width: $md2+px) {
+      font-size: 14px;
+      flex: 0 0 144px;
+      margin: 3px 0;
+    }
+  }
+  &__whatsAppIcon {
+    position: relative;
+    top: 3px;
+    font-size: 16px;
+    margin: 0 12px 0 0;
+    display: none;
+    @media (min-width: $md4+px) {
+      display: block;
+    }
+  }
+
+  &__call {
+    display: none;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    text-decoration-line: underline;
+    color: $colorDarkBlue;
+    @media (min-width: $md4+px) {
+      display: block;
+    }
+  }
+}
+
+

@@ -15,6 +15,12 @@
   height: 3px;
   left: 0;
 }
+
+%flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
 body.lock {
   overflow: hidden;
   @media (min-width: $md3+px) {
@@ -43,20 +49,19 @@ body.lock {
 
   &__mainNav {
     min-height: 40px;
-    display: flex;
-    justify-content: space-between;
+    @extend %flexSpaceBetween;
     align-items: center;
     color: $colorWhite;
     width: 100%;
   }
 
   &__menu {
-    transition: all 0.3s ease 0s;
+    transition: all 0.2s ease 0s;
     position: fixed;
     z-index: 1;
     width: 100%;
     height: 100%;
-    top: -100%;
+    top: -1000%;
     left: 0;
     background-color: $colorMain;
     overflow: auto;
@@ -67,8 +72,8 @@ body.lock {
       min-height: 40px;
       top: 0;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       flex: 0 0 578/1160 * 100%;
       overflow: visible;
     }
@@ -80,8 +85,8 @@ body.lock {
   &__burger {
     display: block;
     position: relative;
-    width: 30px;
-    height: 23px;
+    width: 26px;
+    height: 17px;
     z-index: 16;
 
     @media (min-width: $md3+px) {
@@ -101,11 +106,11 @@ body.lock {
   }
   &__burger.active::before {
     transform: rotate(45deg);
-    top: 10px;
+    top: 7px;
   }
   &__burger.active::after {
     transform: rotate(-45deg);
-    bottom: 10px;
+    bottom: 7px;
   }
   &__burger.active .b-header__burgerSpan {
     transform: scale(0);
@@ -118,17 +123,16 @@ body.lock {
     width: 100%;
     height: 3px;
     left: 0;
-    top: 10px;
+    top: 7px;
     transition: all 0.3s ease 0s;
   }
 
   &__menuList {
     position: relative;
     z-index: 15;
-    display: flex;
+    @extend %flexSpaceBetween;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     margin: 35px 0;
     @media (min-width: $md3+px) {
       margin: 0;
@@ -142,9 +146,8 @@ body.lock {
   &__menuItem {
     position: relative;
     margin: 35px 0 0 0;
-    display: flex;
+    @extend %flexSpaceBetween;
     align-items: center;
-    justify-content: space-between;
     @media (min-width: $md3+px) {
       margin: 0px 5px;
       padding: 5px 0px;
@@ -166,20 +169,25 @@ body.lock {
   &__menuSub-list {
     position: absolute;
     top: 20px;
-    left: -50%;
+
     z-index: 15;
     width: 130px;
     min-height: 150px;
     background-color: $colorOrange;
-    display: flex;
+    @extend %flexSpaceBetween;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     @media (min-width: $md3+px) {
       top: 34px;
+      left: -28%;
     }
   }
-
+  &__menuSub-listFirst {
+    left: -150%;
+  }
+  &__menuSub-listSecond {
+    left: 60%;
+  }
   &__menuSub-item {
     margin: 15px 0;
   }
@@ -192,8 +200,7 @@ body.lock {
   &__actions {
     position: relative;
     z-index: 15;
-    display: flex;
-    justify-content: space-between;
+    @extend %flexSpaceBetween;
     min-height: 100%;
   }
 
@@ -240,11 +247,4 @@ body.lock {
       }
     }
   }
-}
-
-details > summary {
-  list-style: none;
-}
-details > summary::-webkit-details-marker {
-  display: none;
 }

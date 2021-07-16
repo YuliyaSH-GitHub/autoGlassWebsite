@@ -24,4 +24,12 @@ body {
   margin: 0 auto;
 }
 
-@import "bem/header.scss";
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+@import "bem/header-nav.scss";
+@import "bem/header-contacts.scss";
