@@ -203,7 +203,6 @@ body {
 .b-header__actionsText,
 .b-header__menuSub-link,
 .b-header__menuLink {
-  font-family: Exo2;
   font-size: 12px;
   line-height: 140.3%;
   text-align: center;
@@ -266,9 +265,9 @@ body.lock {
 }
 
 .b-header__menu {
-  -webkit-transition: all 0.00003s ease 0s;
-  -o-transition: all 0.00003s ease 0s;
-  transition: all 0.00003s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -391,7 +390,7 @@ body.lock {
   z-index: 15;
   width: 130px;
   min-height: 150px;
-  background-color: #b42727;
+  background-color: #FF391E;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -446,13 +445,33 @@ body.lock {
 }
 
 .b-header__icon {
+  position: relative;
   color: inherit;
   font-size: 20px;
+}
+
+.b-header__count {
+  position: absolute;
+  top: -5px;
+  right: -7px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #FF391E;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
 }
 
 .b-header__actionsText {
   margin: 0 0 0 10px;
   color: inherit;
+}
+
+.b-header__actionsText_basket {
+  display: none;
 }
 
 details > summary {
@@ -515,5 +534,9 @@ details > summary::-webkit-details-marker {
 
   .b-header__menuSub-list {
     top: 34px;
+  }
+
+  .b-header__actionsText_basket {
+    display: block;
   }
 }

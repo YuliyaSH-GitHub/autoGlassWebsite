@@ -14,16 +14,14 @@
 @import "icons";
 @import "null";
 
-
 body {
   color: $colorMain;
-  
 }
 
 ._container {
-	max-width: $maxWidthContainer + px;
-	padding: 0px 15px;
-	margin: 0 auto;
+  max-width: $maxWidthContainer + px;
+  padding: 0px 15px;
+  margin: 0 auto;
 }
 
 @import "bem/header.scss";
