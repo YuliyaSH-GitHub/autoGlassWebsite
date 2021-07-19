@@ -1,7 +1,6 @@
 %colorInherit {
   color: inherit;
 }
-
 .b-footer {
   &_background {
     background-color: $colorMain;
@@ -14,25 +13,27 @@
   &__gridContainer {
     display: grid;
     column-gap: 10px;
-    row-gap: 13px;
+    row-gap: 12px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "catalog services"
       "information logo"
-      "itemText itemText";
+      "design design"
+      "text text";
     @media (min-width: $md4+px) {
       grid-template-columns: repeat(3, 1fr);
       column-gap: 60px;
-      row-gap: 36px;
       grid-template-areas:
         "catalog services information"
-        " logo itemText itemText";
+        " logo text text"
+        " logo design design";
     }
     @media (min-width: $md2+px) {
       grid-template-columns: repeat(4, 1fr);
+      row-gap: 27px;
       grid-template-areas:
         "logo catalog services information"
-        " itemText itemText itemText itemText";
+        " text text text design";
     }
   }
 
@@ -42,6 +43,13 @@
 
   &__catalog {
     grid-area: catalog;
+    margin: 0 0 15px 0;
+    @media (min-width: $md4+px) {
+      margin: 0 0 24px 0;
+    }
+    @media (min-width: $md2+px) {
+      margin: 0;
+    }
   }
 
   &__title {
@@ -51,6 +59,12 @@
     text-transform: uppercase;
     &_indent {
       margin: 0 0 8px 0;
+      @media (min-width: $md2+px) {
+        margin: 0 0 15px 0;
+      }
+    }
+    @media (min-width: $md2+px) {
+      font-size: 16px;
     }
   }
 
@@ -61,23 +75,44 @@
     line-height: 12px;
     &_indent {
       margin: 0 0 7px 0;
+      @media (min-width: $md2+px) {
+        margin: 0 0 8px 0;
+      }
+    }
+    &:hover {
+      color: $colorLinkButton;
+    }
+    @media (min-width: $md2+px) {
+      font-size: 12px;
+      line-height: 14px;
     }
   }
 
   &__services {
     grid-area: services;
+    margin: 0 0 15px 0;
+    @media (min-width: $md4+px) {
+      margin: 0 0 24px 0;
+    }
+    @media (min-width: $md2+px) {
+      margin: 0;
+    }
   }
 
   &__information {
     grid-area: information;
+    @media (min-width: $md4+px) {
+      margin: 0 0 24px 0;
+    }
+    @media (min-width: $md2+px) {
+      margin: 0;
+    }
   }
 
   &__logotype {
     grid-area: logo;
   }
 
-  &__logoLinkImg {
-  }
   &__logo_disposition {
     display: flex;
     flex-direction: column;
@@ -105,14 +140,23 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     text-align: center;
+    @media (min-width: $md2+px) {
+    }
   }
   &__copyright {
     font-size: 8px;
     line-height: 130%;
+    @media (min-width: $md2+px) {
+      font-size: 10px;
+      line-height: 147.3%;
+    }
     &_indent {
       margin: 8px 0;
       @media (min-width: $md4+px) {
         margin: 10px 0 5px;
+      }
+      @media (min-width: $md2+px) {
+        margin: 15px 0 18px;
       }
     }
   }
@@ -122,44 +166,38 @@
     font-size: 8px;
     line-height: 130%;
     text-decoration-line: underline;
+    @media (min-width: $md2+px) {
+      font-size: 10px;
+      line-height: 147.3%;
+    }
+    &:hover {
+      color: $colorLinkButton;
+    }
   }
 
-  &__itemText {
-    grid-area: itemText;
+  &__designText_textDecor {
     font-size: 8px;
     line-height: 147.3%;
     color: $colorFooterText;
     @media (min-width: $md4+px) {
       font-size: 10px;
     }
-    &_flex {
-      display: flex;
-      flex-direction: column;
-      @media (min-width: $md4+px) {
-        justify-content: space-between;
-      }
-    }
   }
 
   &__design {
-    @media (min-width: $md4+px) {
-      order: 2;
-    }
-    &_indent {
-      margin: 0 0 7px 0;
-      @media (min-width: $md4+px) {
-        margin: 12px 0 0 0;
-      }
-    }
+    grid-area: design;
   }
-  &__designSpan {
-  }
+
   &__designLink {
     @extend %colorInherit;
     text-decoration: underline;
+    &:hover {
+      color: $colorLinkButton !important;
+    }
   }
 
   &__text {
+    grid-area: text;
     @media (min-width: $md4+px) {
       max-width: 332px;
     }
