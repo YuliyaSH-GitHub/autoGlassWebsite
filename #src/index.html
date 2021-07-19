@@ -4,14 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Document</title>
   </head>
 
   <body>
     @@include('_header.html')
-    <main class="b-mainContent"></main>
+    <main class="b-mainContent b-mainContent_shadow">
+      <div class="b-mainContent__container _container">
+        <section class="b-mainSlider b-mainSlider_indent">
+          <div class="swiper-container b-mainSlider__container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="b-mainSlider__slide b-mainSlider__slide_background">
+                  <div class="b-mainSlider__slideContent">
+                    <p class="b-mainSlider__text">при покупке стекла у нас</p>
+                    <h1 class="b-mainSlider__title">
+                      установка стекла
+                      <span class="b-mainSlider__title_colorRed"
+                        >со скидкой 10%</span
+                      >
+                    </h1>
+                  </div>
+                  <img
+                    class="b-mainSlider__image"
+                    src="img/main/img01.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="b-services">
+          <div class="b-services__list">
+            <div class="b-services__item">
+              <div class="b-services__itemIcon _icon-check"></div>
+              <h2 class="b-services__listTitle">Работаем со стеклами 26 лет</h2>
+              <p class="b-services__listText">
+                Профессионально устанавливаем и ремонтируем автостекла.
+              </p>
+            </div>
+            <div class="b-services__item">
+              <div class="b-services__itemIcon _icon-check"></div>
+              <h2 class="b-services__listTitle">Работаем со стеклами 26 лет</h2>
+              <p class="b-services__listText">
+                Профессионально устанавливаем и ремонтируем автостекла.
+              </p>
+            </div>
+            <div class="b-services__item">
+              <div class="b-services__itemIcon _icon-check"></div>
+              <h2 class="b-services__listTitle">Работаем со стеклами 26 лет</h2>
+              <p class="b-services__listText">
+                Профессионально устанавливаем и ремонтируем автостекла.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
     @@include('_footer.html')
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts/script.min.js"></script>
   </body>
 </html>

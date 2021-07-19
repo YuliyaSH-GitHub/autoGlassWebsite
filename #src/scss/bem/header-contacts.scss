@@ -11,6 +11,7 @@ body.lock {
 }
 .b-header {
   &__contacts {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.07);
     padding: 52px 0 15px 0;
     @media (min-width: $md4+px) {
       padding: 58px 0 18px 0;
@@ -85,6 +86,7 @@ body.lock {
     text-transform: uppercase;
     color: $colorDarkBlue;
     text-align: center;
+    margin: 2px 0 0 0;
     @media (min-width: $md4+px) {
       font-size: 16px;
       line-height: 19px;
