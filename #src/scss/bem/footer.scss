@@ -1,0 +1,171 @@
+%colorInherit {
+  color: inherit;
+}
+
+.b-footer {
+  &_background {
+    background-color: $colorMain;
+  }
+
+  &_indent {
+    padding: 43px 0 33px 0;
+  }
+
+  &__gridContainer {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 13px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "catalog services"
+      "information logo"
+      "itemText itemText";
+    @media (min-width: $md4+px) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 60px;
+      row-gap: 36px;
+      grid-template-areas:
+        "catalog services information"
+        " logo itemText itemText";
+    }
+    @media (min-width: $md2+px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "logo catalog services information"
+        " itemText itemText itemText itemText";
+    }
+  }
+
+  &__item {
+    color: $colorWhite;
+  }
+
+  &__catalog {
+    grid-area: catalog;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 140.3%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    &_indent {
+      margin: 0 0 8px 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    @extend %colorInherit;
+    font-size: 10px;
+    line-height: 12px;
+    &_indent {
+      margin: 0 0 7px 0;
+    }
+  }
+
+  &__services {
+    grid-area: services;
+  }
+
+  &__information {
+    grid-area: information;
+  }
+
+  &__logotype {
+    grid-area: logo;
+  }
+
+  &__logoLinkImg {
+  }
+  &__logo_disposition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__logoImg {
+    transition: width 0.8s ease 0s;
+    display: block;
+    width: 74px;
+    height: 40px;
+    object-fit: contain;
+    object-position: center;
+    @media (min-width: $md2+px) {
+      width: 89px;
+      height: 49px;
+    }
+  }
+
+  &__nameСompany {
+    transition: font-size 0.8s ease 0s;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__copyright {
+    font-size: 8px;
+    line-height: 130%;
+    &_indent {
+      margin: 8px 0;
+      @media (min-width: $md4+px) {
+        margin: 10px 0 5px;
+      }
+    }
+  }
+
+  &__privacyPolicy {
+    @extend %colorInherit;
+    font-size: 8px;
+    line-height: 130%;
+    text-decoration-line: underline;
+  }
+
+  &__itemText {
+    grid-area: itemText;
+    font-size: 8px;
+    line-height: 147.3%;
+    color: $colorFooterText;
+    @media (min-width: $md4+px) {
+      font-size: 10px;
+    }
+    &_flex {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: $md4+px) {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__design {
+    @media (min-width: $md4+px) {
+      order: 2;
+    }
+    &_indent {
+      margin: 0 0 7px 0;
+      @media (min-width: $md4+px) {
+        margin: 12px 0 0 0;
+      }
+    }
+  }
+  &__designSpan {
+  }
+  &__designLink {
+    @extend %colorInherit;
+    text-decoration: underline;
+  }
+
+  &__text {
+    @media (min-width: $md4+px) {
+      max-width: 332px;
+    }
+
+    @media (min-width: $md2+px) {
+      max-width: 635px;
+    }
+  }
+}

@@ -20,8 +20,14 @@ body {
 
 ._container {
   max-width: $maxWidthContainer + px;
-  padding: 0px 15px;
+  padding: 0px 40px;
   margin: 0 auto;
+  @media (min-width: $md5+px)  {
+    padding: 0px 30px;
+  }
+  @media (min-width: $md2+px)  {
+    padding: 0px 15px;
+  }
 }
 
 details > summary {
@@ -33,3 +39,4 @@ details > summary::-webkit-details-marker {
 
 @import "bem/header-nav.scss";
 @import "bem/header-contacts.scss";
+@import "bem/footer.scss";

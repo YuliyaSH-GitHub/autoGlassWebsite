@@ -196,7 +196,7 @@ body {
 
 ._container {
   max-width: 1190px;
-  padding: 0px 15px;
+  padding: 0px 40px;
   margin: 0 auto;
 }
 
@@ -544,7 +544,7 @@ body.lock {
   margin: 0 7px 0 0;
 }
 
-.b-header__logo {
+.b-header__logo_disposition {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,8 +568,8 @@ body.lock {
   display: block;
   width: 50px;
   height: 27px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   -o-object-position: center;
      object-position: center;
 }
@@ -705,6 +705,159 @@ body.lock {
   color: #23527C;
 }
 
+.b-footer__designLink,
+.b-footer__privacyPolicy,
+.b-footer__link {
+  color: inherit;
+}
+
+.b-footer_background {
+  background-color: #333;
+}
+
+.b-footer_indent {
+  padding: 43px 0 33px 0;
+}
+
+.b-footer__gridContainer {
+  display: grid;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 13px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "catalog services" "information logo" "itemText itemText";
+}
+
+.b-footer__item {
+  color: #fff;
+}
+
+.b-footer__catalog {
+  grid-area: catalog;
+}
+
+.b-footer__title {
+  font-size: 14px;
+  line-height: 140.3%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.b-footer__title_indent {
+  margin: 0 0 8px 0;
+}
+
+.b-footer__link {
+  display: block;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.b-footer__link_indent {
+  margin: 0 0 7px 0;
+}
+
+.b-footer__services {
+  grid-area: services;
+}
+
+.b-footer__information {
+  grid-area: information;
+}
+
+.b-footer__logotype {
+  grid-area: logo;
+}
+
+.b-footer__logo_disposition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.b-footer__logoImg {
+  -webkit-transition: width 0.8s ease 0s;
+  -o-transition: width 0.8s ease 0s;
+  transition: width 0.8s ease 0s;
+  display: block;
+  width: 74px;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.b-footer__nameСompany {
+  -webkit-transition: font-size 0.8s ease 0s;
+  -o-transition: font-size 0.8s ease 0s;
+  transition: font-size 0.8s ease 0s;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.b-footer__copyright {
+  font-size: 8px;
+  line-height: 130%;
+}
+
+.b-footer__copyright_indent {
+  margin: 8px 0;
+}
+
+.b-footer__privacyPolicy {
+  font-size: 8px;
+  line-height: 130%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.b-footer__itemText {
+  grid-area: itemText;
+  font-size: 8px;
+  line-height: 147.3%;
+  color: #B4B4B4;
+}
+
+.b-footer__itemText_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.b-footer__design_indent {
+  margin: 0 0 7px 0;
+}
+
+.b-footer__designLink {
+  text-decoration: underline;
+}
+
+@media (min-width: 375.98px) {
+  ._container {
+    padding: 0px 30px;
+  }
+}
+
 @media (min-width: 479.98px) {
   .b-header__contacts {
     padding: 58px 0 18px 0;
@@ -760,6 +913,43 @@ body.lock {
 
   .b-header__call {
     display: block;
+  }
+
+  .b-footer__gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 60px;
+       -moz-column-gap: 60px;
+            column-gap: 60px;
+    row-gap: 36px;
+    grid-template-areas: "catalog services information" " logo itemText itemText";
+  }
+
+  .b-footer__copyright_indent {
+    margin: 10px 0 5px;
+  }
+
+  .b-footer__itemText {
+    font-size: 10px;
+  }
+
+  .b-footer__itemText_flex {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .b-footer__design {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .b-footer__design_indent {
+    margin: 12px 0 0 0;
+  }
+
+  .b-footer__text {
+    max-width: 332px;
   }
 }
 
@@ -839,6 +1029,10 @@ body.lock {
 }
 
 @media (min-width: 991.98px) {
+  ._container {
+    padding: 0px 15px;
+  }
+
   .b-header__contactItem_placeNone {
     display: block;
     display: -webkit-box;
@@ -879,5 +1073,19 @@ body.lock {
         -ms-flex: 0 0 144px;
             flex: 0 0 144px;
     margin: 3px 0;
+  }
+
+  .b-footer__gridContainer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "logo catalog services information" " itemText itemText itemText itemText";
+  }
+
+  .b-footer__logoImg {
+    width: 89px;
+    height: 49px;
+  }
+
+  .b-footer__text {
+    max-width: 635px;
   }
 }
