@@ -1242,7 +1242,7 @@ body.lock {
     font-size: 16px;
     line-height: 140.3%;
     min-height: 40px;
-    width: 200px;
+    min-width: 200px;
     margin: 0 0 40px 0;
   }
 
