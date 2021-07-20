@@ -1,0 +1,85 @@
+.b-services {
+  overflow: hidden;
+  &_indent {
+    padding: 45px 0 0 0;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    grid-template-rows: auto;
+    column-gap: 15px;
+    row-gap: 7px;
+    margin: 0 0 22px 0;
+  }
+
+  &__itemIcon {
+    color: $colorLinkButton;
+    font-size: 22px;
+    grid-row: 1/3;
+  }
+
+  &__listTitle {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 130%;
+    @media (min-width: $md2+px) {
+    }
+  }
+
+  &__listText {
+    font-size: 14px;
+    line-height: 125%;
+  }
+
+  &__serviceArticle {
+    &_shadow {
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.07);
+    }
+    padding: 24px 0 30px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__serviceArticleContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 200px;
+  }
+
+  &__articleTitle {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  &__articleText {
+    font-size: 14px;
+    line-height: 125%;
+    margin: 15px 0 21px 0;
+  }
+
+  &__articleLink {
+    min-height: 38px;
+    font-weight: 500;
+    line-height: 130%;
+    margin: 0 0 30px 0;
+  }
+  &__articleImgWrap {
+    top: 0;
+    transform: translate(15px);
+    width: 220px;
+    height: 220px;
+    flex: 0 0 220px;
+    overflow: hidden;
+  }
+  &__articleImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: -90px center;
+  }
+}

@@ -22,10 +22,10 @@ body {
   max-width: $maxWidthContainer + px;
   padding: 0px 40px;
   margin: 0 auto;
-  @media (min-width: $md5+px)  {
+  @media (min-width: $md5+px) {
     padding: 0px 30px;
   }
-  @media (min-width: $md2+px)  {
+  @media (min-width: $md2+px) {
     padding: 0px 15px;
   }
 }
@@ -37,7 +37,20 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
+.buttonLink {
+  min-height: 40px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 147.3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $colorLinkButton;
+  color: $colorWhite;
+}
+
 @import "bem/header-nav.scss";
 @import "bem/header-contacts.scss";
 @import "bem/footer.scss";
 @import "bem/mainSlider.scss";
+@import "bem/services.scss";
