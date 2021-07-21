@@ -56,11 +56,16 @@ details > summary::-webkit-details-marker {
 .sectionTitle {
   font-size: 20px;
   line-height: 120%;
+  @media (min-width: $md2+px) {
+    font-size: 24px;
+    line-height: 130%;
+  }
 }
 
 @import "bem/header-nav.scss";
 @import "bem/header-contacts.scss";
 @import "bem/catalog.scss";
 @import "bem/footer.scss";
+@import "bem/goods.scss";
 @import "bem/mainSlider.scss";
 @import "bem/services.scss";

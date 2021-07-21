@@ -1,11 +1,14 @@
 .b-catalog {
-  padding: 24px 0;
-  @media (min-width: $md4+px) {
-    padding: 50px 0;
+  &_indent {
+    padding: 24px 0 44px;
+    @media (min-width: $md4+px) {
+      padding: 50px 0;
+    }
+    @media (min-width: $md2+px) {
+      padding: 44px 0;
+    }
   }
-  @media (min-width: $md2+px) {
-    padding: 44px 0;
-  }
+
   &__title {
     &_indent {
       margin: 0 0 26px 0;
@@ -47,14 +50,6 @@
       padding: 5px 10px;
     }
   }
-  // &__inputDiv:not(:last-child) {
-  //   margin: 0 0 10px 0;
-  // }
-  // &__inputDiv:not(:nth-child(3n)) {
-  //   @media (min-width: $md4+px) {
-  //     margin-right: 20px;
-  //   }
-  // }
 
   &__input {
     width: 95%;
@@ -134,9 +129,9 @@
     font-weight: 500;
     line-height: 130%;
     &._hold {
-			opacity: 0.4;
-			cursor: default;
-		}
+      opacity: 0.4;
+      cursor: default;
+    }
 
     @media (min-width: $md4+px) {
       font-size: 16px;

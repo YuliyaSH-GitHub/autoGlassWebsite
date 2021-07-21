@@ -1,0 +1,141 @@
+.b-goods {
+  &_indent {
+    padding: 0 0 43px 0;
+    @media (min-width: $md4+px) {
+      padding: 0 0 52px 0;
+    }
+    @media (min-width: $md2+px) {
+      padding: 0 0 70px 0;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 140px);
+    gap: 15px;
+    justify-content: center;
+
+    &_indent {
+      margin: 26px 0 30px 0;
+      @media (min-width: $md2+px) {
+        margin: 36px 0 40px 0;
+      }
+    }
+    @media (max-width: 374px) {
+        grid-template-columns: 1fr;
+    }
+    @media (min-width: $md4+px) {
+      grid-template-columns: repeat(auto-fit, 300px);
+      gap: 20px;
+    }
+    @media (min-width: $md2+px) {
+      grid-template-columns: repeat(auto-fit, 260px);
+      gap: 40px;
+    }
+  }
+
+  &__item {
+    transition: width 0.8s ease 0s;
+    max-width: 140px;
+    border: 1px solid $colorFooterText;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 375px) {
+        max-width: 100%;
+    }
+    &_indent {
+      padding: 30px 10px;
+
+      @media (min-width: $md4+px) {
+        padding: 30px 50px;
+      }
+      @media (min-width: $md2+px) {
+        padding: 30px 35px;
+      }
+    }
+
+    @media (min-width: $md4+px) {
+      max-width: 300px;
+      min-height: 330px;
+    }
+    @media (min-width: $md2+px) {
+      max-width: 260px;
+      min-height: 330px;
+    }
+  }
+
+  &__img {
+    width: 120px;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+
+    @media (min-width: $md4+px) {
+      width: 190px;
+      height: 160px;
+    }
+  }
+
+  &__text {
+    line-height: 125%;
+    text-align: center;
+
+    &_indent {
+      margin: 15px 0;
+    }
+
+    @media (min-width: $md2+px) {
+      font-size: 16px;
+      line-height: 135%;
+    }
+  }
+
+  &__priceWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (min-width: $md4+px) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__price {
+    display: block;
+    font-weight: bold;
+    line-height: 130%;
+    text-align: center;
+    @media (min-width: $md2+px) {
+      font-size: 16px;
+      line-height: 146.3%;
+    }
+  }
+
+  &__buyLink {
+    width: 78px;
+    min-height: 30px;
+
+    &_indent {
+      margin: 17px 0 0 0;
+
+      @media (min-width: $md4+px) {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+
+  &__link {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 40px;
+
+    @media (min-width: $md4+px) {
+      width: 200px;
+    }
+  }
+}
