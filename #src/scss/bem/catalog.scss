@@ -1,29 +1,84 @@
 .b-catalog {
+  padding: 44px 0;
   &__title {
+    &_indent {
+      margin: 0 0 26px 0;
+    }
   }
 
   &__inputContainer {
   }
 
   &__inputDiv {
+    width: 100%;
+    height: 28px;
+    padding: 7px 15px;
+    border: 1px solid $colorFooterText;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_back {
+      background-color: $colorBackInput;
+    }
+    @media (min-width: $md4+px) {
+      width: 180px;
+    }
+  }
+  &__inputDiv:not(:last-child) {
+    margin: 0 0 10px 0;
   }
 
   &__input {
+    &_back {
+      background-color: $colorBackInput;
+    }
   }
 
   &__buttonSearch {
+    width: 100%;
+    min-height: 28px;
+    margin: 20px 0 0 0;
+    @media (min-width: $md4+px) {
+      width: 120px;
+    }
   }
 
   &__grid {
+    margin: 30px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 90px);
+    gap: 12px;
+    justify-content: center;
+    @media (min-width: $md2+px) {
+      gap: 20px;
+    }
   }
 
   &__item {
+    padding: 7px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $colorFooterText;
   }
 
   &__logoImg {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 0 10px 0;
   }
 
   &__logoText {
+    font-size: 16px;
+    line-height: 135%;
+    text-align: center;
   }
 
   &__buttonShow {

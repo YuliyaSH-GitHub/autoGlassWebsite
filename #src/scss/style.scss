@@ -49,6 +49,11 @@ details > summary::-webkit-details-marker {
   color: $colorWhite;
 }
 
+.sectionTitle {
+  font-size: 20px;
+  line-height: 120%;
+}
+
 @import "bem/header-nav.scss";
 @import "bem/header-contacts.scss";
 @import "bem/catalog.scss";
