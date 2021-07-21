@@ -1,0 +1,148 @@
+{
+	"products": [
+		{
+			"id": 10,
+			"url": "#",
+			"image": "logo10.png",
+			"text": "Geely"
+		},
+		{
+			"id": 11,
+			"url": "#",
+			"image": "logo11.png",
+			"text": "Honda"
+		},
+		{
+			"id": 12,
+			"url": "#",
+			"image": "logo12.png",
+			"text": "Hyundai"
+		},
+		{
+			"id": 13,
+			"url": "#",
+			"image": "logo13.png",
+			"text": "Infinity"
+		},
+		{
+			"id": 14,
+			"url": "#",
+			"image": "logo14.png",
+			"text": "Kia"
+		},
+		{
+			"id": 15,
+			"url": "#",
+			"image": "logo15.png",
+			"text": "Lada"
+		},
+		{
+			"id": 16,
+			"url": "#",
+			"image": "logo16.png",
+			"text": "Land Rover"
+		},
+		{
+			"id": 17,
+			"url": "#",
+			"image": "logo17.png",
+			"text": "Lexus"
+		},
+		{
+			"id": 18,
+			"url": "#",
+			"image": "logo18.png",
+			"text": "Lifan"
+		},
+		{
+			"id": 19,
+			"url": "#",
+			"image": "logo19.png",
+			"text": "Mazda"
+		},
+		{
+			"id": 20,
+			"url": "#",
+			"image": "logo20.png",
+			"text": "Mercedes"
+		},
+		{
+			"id": 21,
+			"url": "#",
+			"image": "logo21.png",
+			"text": "Mitsubishi"
+		},
+		{
+			"id": 22,
+			"url": "#",
+			"image": "logo22.png",
+			"text": "Nissan"
+		},
+		{
+			"id": 23,
+			"url": "#",
+			"image": "logo23.png",
+			"text": "Opel"
+		},
+		{
+			"id": 24,
+			"url": "#",
+			"image": "logo24.png",
+			"text": "Peugeot"
+		},
+		{
+			"id": 25,
+			"url": "#",
+			"image": "logo25.png",
+			"text": "Renault"
+		},
+		{
+			"id": 26,
+			"url": "#",
+			"image": "logo26.png",
+			"text": "Skoda"
+		},
+		{
+			"id": 27,
+			"url": "#",
+			"image": "logo27.png",
+			"text": "Subaru"
+		},
+		{
+			"id": 28,
+			"url": "#",
+			"image": "logo28.png",
+			"text": "Suzuki"
+		},
+		{
+			"id": 29,
+			"url": "#",
+			"image": "logo29.png",
+			"text": "Toyota"
+		},
+		{
+			"id": 30,
+			"url": "#",
+			"image": "logo30.png",
+			"text": "Volkswagen"
+		},
+		{
+			"id": 31,
+			"url": "#",
+			"image": "logo31.png",
+			"text": "Volvo"
+		},
+		{
+			"id": 32,
+			"url": "#",
+			"image": "logo32.png",
+			"text": "ГАЗ"
+		},
+		{
+			"id": 33,
+			"url": "#",
+			"image": "logo33.png",
+			"text": "Камаз"
+		}
+	]
+}

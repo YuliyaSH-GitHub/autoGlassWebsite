@@ -49,6 +49,9 @@ details > summary::-webkit-details-marker {
   color: $colorWhite;
   padding-bottom: 2px;
 }
+.buttonLink:hover {
+  background-color: darken($colorLinkButton, 5%);
+}
 
 .sectionTitle {
   font-size: 20px;

@@ -220,9 +220,15 @@ body.lock {
   }
 
   &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     color: inherit;
     font-size: 20px;
+  }
+  &__icon:hover {
+    color: $colorLinkButton;
   }
   &__count {
     position: absolute;
@@ -239,6 +245,7 @@ body.lock {
     color: #ffffff;
   }
   &__actionsText {
+    display: block;
     @extend %linkHeader;
     margin: 0 0 0 10px;
     color: inherit;
