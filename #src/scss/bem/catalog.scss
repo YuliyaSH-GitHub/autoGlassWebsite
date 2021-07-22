@@ -98,10 +98,16 @@
     align-items: center;
     color: inherit;
     border: 1px solid $colorFooterText;
+    &:hover {
+      border: 1px solid $colorLinkButton;
+    }
     @media (min-width: $md2+px) {
       width: 110px;
       min-height: 100px;
     }
+  }
+  &__item:hover .b-catalog__logoText {
+    color: $colorLinkButton;
   }
 
   &__logoImg {

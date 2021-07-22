@@ -31,6 +31,7 @@
     @media (min-width: $md2+px) {
       grid-template-columns: repeat(auto-fit, 260px);
       gap: 40px;
+      justify-content: space-between;
     }
   }
 
@@ -52,7 +53,7 @@
         padding: 30px 50px;
       }
       @media (min-width: $md2+px) {
-        padding: 30px 35px;
+        padding: 24px 35px;
       }
     }
 
@@ -67,14 +68,13 @@
   }
 
   &__img {
-    width: 120px;
-    height: 100px;
+    max-width: 120px;
+    height: auto;
     object-fit: contain;
     object-position: center;
 
     @media (min-width: $md4+px) {
-      width: 190px;
-      height: 160px;
+      max-width: 190px;
     }
   }
 

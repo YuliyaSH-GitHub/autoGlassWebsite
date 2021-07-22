@@ -214,40 +214,26 @@ body.lock {
     text-transform: uppercase;
     color: inherit;
   }
-
-  &__whatsAppWrap {
-    @extend %flexSpaceBetween;
-  }
-
-  &__whatsApp {
-    margin: 6px 0 0 0;
-    flex: 0 0 105px;
-    font-weight: 500;
+  &__communication {
     font-size: 10px;
     line-height: 140.3%;
-    text-align: right;
-    text-decoration-line: underline;
-    color: inherit;
     @media (min-width: $md4+px) {
       font-size: 12px;
-      text-decoration: none;
-      flex: 0 0 123px;
+      flex: 0 0 151px;
       margin: 6px 0 4px 0;
     }
     @media (min-width: $md2+px) {
       font-size: 14px;
-      flex: 0 0 144px;
+      flex: 0 0 172px;
       margin: 3px 0;
     }
   }
+
   &__whatsAppIcon {
-    position: relative;
-    top: 3px;
-    font-size: 16px;
-    margin: 0 12px 0 0;
-    display: none;
-    @media (min-width: $md4+px) {
-      display: block;
+    color: $colorWhatsApp;
+    margin: 0 7px 0 0;
+    @media (min-width: $md2+px) {
+      margin: 0 7px 0 0;
     }
   }
 

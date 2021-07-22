@@ -1,18 +1,13 @@
-@mixin font($font_name, $file_name, $weight, $style) {
-  @font-face {
-    font-family: $font_name;
-    font-display: swap;
-    src: url("../fonts/#{$file_name}.woff") format("woff"),
-      url("../fonts/#{$file_name}.woff2") format("woff2");
-    font-weight: #{$weight};
-    font-style: #{$style};
-  }
-}
-
+@import "mixin";
 @import "variables";
 @import "fonts";
 @import "icons";
 @import "null";
+
+%flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
 
 body {
   color: $colorMain;
@@ -37,7 +32,7 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
-.buttonLink {
+._buttonLink {
   min-height: 40px;
   width: 100%;
   font-size: 14px;
@@ -49,11 +44,11 @@ details > summary::-webkit-details-marker {
   color: $colorWhite;
   padding-bottom: 2px;
 }
-.buttonLink:hover {
+._buttonLink:hover {
   background-color: darken($colorLinkButton, 5%);
 }
 
-.sectionTitle {
+._sectionTitle {
   font-size: 20px;
   line-height: 120%;
   @media (min-width: $md2+px) {
@@ -62,10 +57,51 @@ details > summary::-webkit-details-marker {
   }
 }
 
+._communicationWrap {
+  @extend %flexSpaceBetween;
+}
+
+._communication {
+  margin: 6px 0 0 0;
+  flex: 0 0 105px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: right;
+  text-decoration-line: underline;
+  color: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @media (min-width: $md4+px) {
+    text-decoration: none;
+    flex: 0 0 200px;
+    margin: 6px 0 4px 0;
+  }
+  @media (min-width: $md2+px) {
+    font-size: 16px;
+    flex: 0 0 205px;
+    margin: 3px 0;
+  }
+}
+._communicationIcon {
+  font-size: 16px;
+  margin: 0 15px 0 0;
+  display: none;
+  @media (min-width: $md4+px) {
+    display: block;
+  }
+  @media (min-width: $md2+px) {
+    margin: 0 17px 0 0;
+  }
+}
+
 @import "bem/header-nav.scss";
 @import "bem/header-contacts.scss";
 @import "bem/catalog.scss";
+@import "bem/comments.scss";
 @import "bem/footer.scss";
 @import "bem/goods.scss";
 @import "bem/mainSlider.scss";
 @import "bem/services.scss";
+@import "bem/request.scss";
