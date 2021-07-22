@@ -12,7 +12,7 @@
   &_item {
   }
   &_item:last-child {
-      margin: 29px 0 0 0;
+    margin: 29px 0 0 0;
   }
   &__title {
     &_indent {
@@ -51,13 +51,36 @@
       margin: 9px 0 0 0;
     }
   }
+  &__communicationWrap {
+    &_indent {
+      margin: 24px 0 20px 0;
+    }
+  }
 
   &__communication {
+    font-size: 16px;
+    @media (min-width: $md4+px) {
+    }
+    @media (min-width: $md2+px) {
+      font-size: 18px;
+      line-height: 140.3%;
+    }
   }
 
   &__phoneIcon {
+    font-size: 20px;
+    @media (min-width: $md2+px) {
+      font-size: 24px;
+    }
   }
 
   &__whatsAppIcon {
+    width: 20px;
+    height: 20px;
+    color: $colorWhatsApp;
+    @media (min-width: $md2+px) {
+      width: 24px;
+      height: 24px;
+    }
   }
 }

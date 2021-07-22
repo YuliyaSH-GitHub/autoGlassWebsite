@@ -62,35 +62,24 @@ details > summary::-webkit-details-marker {
 }
 
 ._communication {
-  margin: 6px 0 0 0;
-  flex: 0 0 105px;
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
   text-align: right;
-  text-decoration-line: underline;
   color: inherit;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   @media (min-width: $md4+px) {
-    text-decoration: none;
-    flex: 0 0 200px;
-    margin: 6px 0 4px 0;
+
   }
   @media (min-width: $md2+px) {
     font-size: 16px;
-    flex: 0 0 205px;
-    margin: 3px 0;
   }
 }
 ._communicationIcon {
   font-size: 16px;
   margin: 0 15px 0 0;
-  display: none;
-  @media (min-width: $md4+px) {
-    display: block;
-  }
   @media (min-width: $md2+px) {
     margin: 0 17px 0 0;
   }

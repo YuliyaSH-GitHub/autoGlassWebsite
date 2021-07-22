@@ -261,16 +261,10 @@ details > summary::-webkit-details-marker {
 }
 
 ._communication {
-  margin: 6px 0 0 0;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 105px;
-          flex: 0 0 105px;
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
   text-align: right;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
   color: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -286,7 +280,6 @@ details > summary::-webkit-details-marker {
 ._communicationIcon {
   font-size: 16px;
   margin: 0 15px 0 0;
-  display: none;
 }
 
 .b-header__actionsText,
@@ -776,13 +769,19 @@ body.lock {
 }
 
 .b-header__communication {
+  margin: 6px 0 0 0;
   font-size: 10px;
   line-height: 140.3%;
 }
 
 .b-header__whatsAppIcon {
   color: #4CAF50;
-  margin: 0 7px 0 0;
+  display: none;
+}
+
+.b-header__whatsAppText {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .b-header__call {
@@ -1572,6 +1571,24 @@ body.lock {
   margin: 9px 0 0 0;
 }
 
+.b-request__communicationWrap_indent {
+  margin: 24px 0 20px 0;
+}
+
+.b-request__communication {
+  font-size: 16px;
+}
+
+.b-request__phoneIcon {
+  font-size: 20px;
+}
+
+.b-request__whatsAppIcon {
+  width: 20px;
+  height: 20px;
+  color: #4CAF50;
+}
+
 @media (min-width: 375.98px) {
   ._container {
     padding: 0px 30px;
@@ -1579,18 +1596,6 @@ body.lock {
 }
 
 @media (min-width: 479.98px) {
-  ._communication {
-    text-decoration: none;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 200px;
-            flex: 0 0 200px;
-    margin: 6px 0 4px 0;
-  }
-
-  ._communicationIcon {
-    display: block;
-  }
-
   .b-header__contacts {
     padding: 58px 0 18px 0;
   }
@@ -1633,8 +1638,8 @@ body.lock {
   .b-header__communication {
     font-size: 12px;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 151px;
-            flex: 0 0 151px;
+        -ms-flex: 0 0 155px;
+            flex: 0 0 155px;
     margin: 6px 0 4px 0;
   }
 
@@ -1926,6 +1931,12 @@ body.lock {
     font-size: 14px;
   }
 
+  .b-header__whatsAppIcon {
+    display: block;
+    margin: 0 5px 0 0;
+    font-size: 14px;
+  }
+
   .b-mainSlider__image {
     width: 281px;
   }
@@ -1951,10 +1962,6 @@ body.lock {
 
   ._communication {
     font-size: 16px;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 205px;
-            flex: 0 0 205px;
-    margin: 3px 0;
   }
 
   ._communicationIcon {
@@ -2005,6 +2012,7 @@ body.lock {
 
   .b-header__whatsAppIcon {
     margin: 0 7px 0 0;
+    font-size: 16px;
   }
 
   .b-catalog_indent {
@@ -2250,6 +2258,20 @@ body.lock {
        object-position: 30px center;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+
+  .b-request__communication {
+    font-size: 18px;
+    line-height: 140.3%;
+  }
+
+  .b-request__phoneIcon {
+    font-size: 24px;
+  }
+
+  .b-request__whatsAppIcon {
+    width: 24px;
+    height: 24px;
   }
 }
 
