@@ -1483,7 +1483,11 @@ body.lock {
 }
 
 .b-request_indent {
+  -webkit-transition: margin 0.8s ease 0s;
+  -o-transition: margin 0.8s ease 0s;
+  transition: margin 0.8s ease 0s;
   padding: 34px 30px 45px;
+  margin: 0 0 50px 0;
 }
 
 .b-request_back {
@@ -1500,6 +1504,15 @@ body.lock {
 
 .b-request__text_indent {
   margin: 0 0 27px 0;
+}
+
+.b-request__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 350px;
 }
 
 .b-request__inputTel {
@@ -1568,7 +1581,7 @@ body.lock {
 }
 
 .b-request__privacyPolicy_indent {
-  margin: 9px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 .b-request__communicationWrap_indent {
@@ -1854,6 +1867,34 @@ body.lock {
        object-fit: contain;
     -o-object-position: center;
        object-position: center;
+  }
+
+  .b-request_indent {
+    margin: 0 0 60px 0;
+  }
+
+  .b-request_item:last-child {
+    margin: 32px 0 0 0;
+  }
+
+  .b-request__inputTel {
+    width: 57.1428571429%;
+  }
+
+  .b-request__inputTel_indent {
+    margin: 0 0 0 0;
+  }
+
+  .b-request__submit {
+    width: 42.8571428571%;
+  }
+
+  .b-request__privacyPolicy {
+    max-width: 244px;
+  }
+
+  .b-request__communicationWrap_indent {
+    margin: 26px 0 20px 0;
   }
 }
 
@@ -2258,6 +2299,41 @@ body.lock {
        object-position: 30px center;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+
+  .b-request {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .b-request_indent {
+    margin: 0 0 80px 0;
+  }
+
+  .b-request_item:last-child {
+    margin: 0 0 0 0;
+  }
+
+  .b-request__title {
+    max-width: 294px;
+  }
+
+  .b-request__title_indent {
+    margin: 0 0 22px 0;
+  }
+
+  .b-request__privacyPolicy_indent {
+    margin: 12px 0 0 0;
+  }
+
+  .b-request__communicationWrap_indent {
+    margin: 36px 0 20px 0;
   }
 
   .b-request__communication {
