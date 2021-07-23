@@ -1026,6 +1026,10 @@ body.lock {
   margin: 0 0 0 7px;
 }
 
+.b-companyContacts__map {
+  height: 550px;
+}
+
 .b-footer__designLink,
 .b-footer__privacyPolicy,
 .b-footer__link {
