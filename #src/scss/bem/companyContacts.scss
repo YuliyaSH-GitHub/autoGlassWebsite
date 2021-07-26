@@ -1,42 +1,238 @@
 .b-companyContacts {
   &__map {
+    display: none;
+    @media (min-width: $md2+px) {
+      display: block;
       height: 550px;
+    }
   }
-
+  &__mapPlaneTable {
+    height: 400px;
+    width: 100%;
+    @media (min-width: $md4+px) {
+      height: 330px;
+    }
+    @media (min-width: $md2+px) {
+      display: none;
+    }
+  }
   &__items {
-  }
+    display: grid;
+    column-gap: 20px;
+    row-gap: 22px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "designation designation"
+      "contact contact"
+      "telephone telephone"
+      "place schedule";
+    @media (min-width: $md4+px) {
+      width: 410px;
+      column-gap: 50px;
+      row-gap: 30px;
+      grid-template-areas:
+        "designation designation"
+        "contact telephone"
+        "schedule place";
+    }
+    @media (min-width: $md2+px) {
+      padding: 30px 20px 44px 40px;
+      position: relative;
+      top: -487px;
+      left: 0;
+      z-index: 3;
+      width: 540px;
+      min-height: 430px;
+      background-color: #fff;
+      column-gap: 43px;
+      row-gap: 28px;
+      grid-template-areas:
+        "contact telephone"
+        "schedule place"
+        "designation designation";
+    }
 
-  &__placeText {
-  }
-
-  &__title {
-  }
-
-  &__place {
-    &_red {
+    &_indent {
+      margin: 45px 0 47px 0;
+      @media (min-width: $md4+px) {
+        margin: 35px auto 37px;
+      }
+      @media (min-width: $md2+px) {
+        margin: 0;
+      }
     }
   }
 
-  &__contactItem {
+  &__itemPlace {
+    grid-area: place;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
-  &__schedule {
+  &__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 130%;
+    @media (min-width: $md2+px) {
+      font-size: 16px;
+      line-height: 146.3%;
+    }
+
+    &_flex {
+      width: 100%;
+      grid-column: 1/-1;
+    }
+    &_indent {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  &__place {
+    font-size: 14px;
+    line-height: 125%;
+    @media (min-width: $md2+px) {
+      font-size: 16px;
+      line-height: 135%;
+    }
+    &_blue {
+      color: $colorDarkBlue;
+      font-weight: bold;
+    }
+  }
+
+  &__itemSchedule {
+    font-size: 16px;
+    line-height: 135%;
+    grid-area: schedule;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__itemContact {
+    grid-area: contact;
+    @media (min-width: $md2+px) {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140.3%;
+    }
+  }
+
+  &__itemTelephone {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    grid-area: telephone;
+    display: flex;
+    flex-wrap: wrap;
+    @media (min-width: $md4+px) {
+      flex-direction: column;
+    }
+    @media (min-width: $md2+px) {
+      font-size: 18px;
+      line-height: 140.3%;
+    }
   }
 
   &__communicationWrap {
     &_indent {
+      margin: 0 0 12px 0;
+    }
+  }
+  &__communicationPhone {
+    width: 50%;
+    @media (min-width: $md4+px) {
+      width: 100%;
+    }
+    @media (max-width: 340px) {
+      width: 100%;
+    }
+    &_indent {
+      @media (min-width: $md4+px) {
+        margin: 0 0 5px 0;
+      }
+      @media (max-width: 340px) {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  &__communication {
+    text-align: left;
+    &:hover {
+      color: $colorLinkButton;
+    }
+  }
+
+  &__RequestCall {
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color: $colorDarkBlue;
+
+    &_indent {
+      margin: 5px 0 0 0;
     }
   }
 
   &__whatsAppIcon {
-  }
-
-  &__communication {
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: $colorWhatsApp;
+    @media (min-width: $md2+px) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__phoneIcon {
+    font-size: 20px;
+    &:hover {
+      color: $colorMain !important;
+    }
+    @media (min-width: $md2+px) {
+      font-size: 24px;
+    }
+  }
+
+  &__itemDesignation {
+    grid-area: designation;
   }
 
   &__designation {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 0 0 0 75px;
+    position: relative;
+
+    &_indent {
+      margin: 0 0 10px 0;
+    }
+    &::before {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 60px;
+      background-color: $colorDarkBlue;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: 2;
+    }
+  }
+  &__designation:last-child {
+    &::before {
+      background-color: $colorOrange;
+    }
+  }
+  ._container {
+    @media (min-width: $md2+px) {
+      height: 0;
+    }
   }
 }

@@ -475,7 +475,7 @@ body.lock {
   z-index: 15;
   width: 130px;
   min-height: 150px;
-  background-color: #FF391E;
+  background-color: #ff391e;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -552,7 +552,7 @@ body.lock {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #FF391E;
+  background-color: #ff391e;
   font-size: 10px;
   line-height: 15px;
   text-align: center;
@@ -677,7 +677,7 @@ body.lock {
   line-height: 10px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #23527C;
+  color: #23527c;
   text-align: center;
   margin: 2px 0 0 0;
 }
@@ -704,7 +704,7 @@ body.lock {
 }
 
 .b-header__place_red {
-  color: #FF391E;
+  color: #ff391e;
 }
 
 .b-header__place:first-child {
@@ -791,7 +791,7 @@ body.lock {
   text-align: right;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-  color: #23527C;
+  color: #23527c;
 }
 
 .b-catalog_indent {
@@ -983,7 +983,7 @@ body.lock {
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  color: #23527C;
+  color: #23527c;
 }
 
 .b-comments__show {
@@ -1027,7 +1027,177 @@ body.lock {
 }
 
 .b-companyContacts__map {
-  height: 550px;
+  display: none;
+}
+
+.b-companyContacts__mapPlaneTable {
+  height: 400px;
+  width: 100%;
+}
+
+.b-companyContacts__items {
+  display: grid;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "designation designation" "contact contact" "telephone telephone" "place schedule";
+}
+
+.b-companyContacts__items_indent {
+  margin: 45px 0 47px 0;
+}
+
+.b-companyContacts__itemPlace {
+  grid-area: place;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.b-companyContacts__title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.b-companyContacts__title_flex {
+  width: 100%;
+  grid-column: 1/-1;
+}
+
+.b-companyContacts__title_indent {
+  margin: 0 0 15px 0;
+}
+
+.b-companyContacts__place {
+  font-size: 14px;
+  line-height: 125%;
+}
+
+.b-companyContacts__place_blue {
+  color: #23527c;
+  font-weight: bold;
+}
+
+.b-companyContacts__itemSchedule {
+  font-size: 16px;
+  line-height: 135%;
+  grid-area: schedule;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.b-companyContacts__itemContact {
+  grid-area: contact;
+}
+
+.b-companyContacts__itemTelephone {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  grid-area: telephone;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.b-companyContacts__communicationWrap_indent {
+  margin: 0 0 12px 0;
+}
+
+.b-companyContacts__communicationPhone {
+  width: 50%;
+}
+
+.b-companyContacts__communication {
+  text-align: left;
+}
+
+.b-companyContacts__communication:hover {
+  color: #5AA1E1;
+}
+
+.b-companyContacts__RequestCall {
+  font-size: 14px;
+  line-height: 17px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #23527c;
+}
+
+.b-companyContacts__RequestCall_indent {
+  margin: 5px 0 0 0;
+}
+
+.b-companyContacts__whatsAppIcon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #4CAF50;
+}
+
+.b-companyContacts__phoneIcon {
+  font-size: 20px;
+}
+
+.b-companyContacts__phoneIcon:hover {
+  color: #333 !important;
+}
+
+.b-companyContacts__itemDesignation {
+  grid-area: designation;
+}
+
+.b-companyContacts__designation {
+  font-size: 10px;
+  line-height: 12px;
+  padding: 0 0 0 75px;
+  position: relative;
+}
+
+.b-companyContacts__designation_indent {
+  margin: 0 0 10px 0;
+}
+
+.b-companyContacts__designation::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  background-color: #23527c;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+}
+
+.b-companyContacts__designation:last-child::before {
+  background-color: #ff391e;
 }
 
 .b-footer__designLink,
@@ -1347,7 +1517,7 @@ body.lock {
 
 .b-mainSlider__title_colorRed {
   display: block;
-  color: #FF391E;
+  color: #ff391e;
 }
 
 .b-services {
@@ -1708,6 +1878,38 @@ body.lock {
 
   .b-comments__item {
     max-width: 300px;
+  }
+
+  .b-companyContacts__mapPlaneTable {
+    height: 330px;
+  }
+
+  .b-companyContacts__items {
+    width: 410px;
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+    row-gap: 30px;
+    grid-template-areas: "designation designation" "contact telephone" "schedule place";
+  }
+
+  .b-companyContacts__items_indent {
+    margin: 35px auto 37px;
+  }
+
+  .b-companyContacts__itemTelephone {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .b-companyContacts__communicationPhone {
+    width: 100%;
+  }
+
+  .b-companyContacts__communicationPhone_indent {
+    margin: 0 0 5px 0;
   }
 
   .b-footer__gridContainer {
@@ -2103,6 +2305,69 @@ body.lock {
     max-width: 100%;
   }
 
+  .b-companyContacts__map {
+    display: block;
+    height: 550px;
+  }
+
+  .b-companyContacts__mapPlaneTable {
+    display: none;
+  }
+
+  .b-companyContacts__items {
+    padding: 30px 20px 44px 40px;
+    position: relative;
+    top: -487px;
+    left: 0;
+    z-index: 3;
+    width: 540px;
+    min-height: 430px;
+    background-color: #fff;
+    -webkit-column-gap: 43px;
+       -moz-column-gap: 43px;
+            column-gap: 43px;
+    row-gap: 28px;
+    grid-template-areas: "contact telephone" "schedule place" "designation designation";
+  }
+
+  .b-companyContacts__items_indent {
+    margin: 0;
+  }
+
+  .b-companyContacts__title {
+    font-size: 16px;
+    line-height: 146.3%;
+  }
+
+  .b-companyContacts__place {
+    font-size: 16px;
+    line-height: 135%;
+  }
+
+  .b-companyContacts__itemContact {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140.3%;
+  }
+
+  .b-companyContacts__itemTelephone {
+    font-size: 18px;
+    line-height: 140.3%;
+  }
+
+  .b-companyContacts__whatsAppIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .b-companyContacts__phoneIcon {
+    font-size: 24px;
+  }
+
+  .b-companyContacts ._container {
+    height: 0;
+  }
+
   .b-footer__gridContainer {
     grid-template-columns: repeat(4, 1fr);
     row-gap: 27px;
@@ -2378,5 +2643,15 @@ body.lock {
 
   .b-goods__items {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 340px) {
+  .b-companyContacts__communicationPhone {
+    width: 100%;
+  }
+
+  .b-companyContacts__communicationPhone_indent {
+    margin: 0 0 10px 0;
   }
 }

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.min.css" />
+  <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
   <title>Document</title>
 </head>
 
@@ -343,7 +344,7 @@
             </p>
             <div class="b-goods__priceWrap">
               <span class="b-goods__price">3000 руб.</span>
-              <a class="b-goods__buyLink b-goods__buyLink_indent buttonLink" href="#">Купить</a>
+              <a class="b-goods__buyLink b-goods__buyLink_indent _buttonLink" href="#">Купить</a>
             </div>
           </article>
           <article class="b-goods__item b-goods__item_indent">
@@ -477,71 +478,63 @@
       </section>
     </div>
     <section class="b-companyContacts">
-      <div class="b-companyContacts__map">
-        <iframe id="map_971305190" frameborder="0" width="100%" height="550px"
-          sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
-        <script type="text/javascript">
-          (function (e, t) {
-            var r = document.getElementById(e);
-            r.contentWindow.document.open(),
-              r.contentWindow.document.write(atob(t)),
-              r.contentWindow.document.close();
-          })(
-            "map_971305190",
-            "PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUsdCl7dmFyIHI9SlNPTi5wYXJzZShlKSxuPUpTT04ucGFyc2UodCk7ZnVuY3Rpb24gYShlKXtyZXR1cm4gZGVjb2RlVVJJQ29tcG9uZW50KGF0b2IoZSkuc3BsaXQoIiIpLm1hcChmdW5jdGlvbihlKXtyZXR1cm4iJSIrKCIwMCIrZS5jaGFyQ29kZUF0KDApLnRvU3RyaW5nKDE2KSkuc2xpY2UoLTIpfSkuam9pbigiIikpfURHLnRoZW4oZnVuY3Rpb24oKXt2YXIgZT1ERy5tYXAoIm1hcCIse2NlbnRlcjpbbi5sYXQsbi5sb25dLHpvb206bi56b29tfSk7REcuZ2VvSlNPTihyLHtzdHlsZTpmdW5jdGlvbihlKXt2YXIgdCxyLG4sYSxvO3JldHVybntmaWxsQ29sb3I6bnVsbD09PSh0PWUpfHx2b2lkIDA9PT10P3ZvaWQgMDp0LnByb3BlcnRpZXMuZmlsbENvbG9yLGZpbGxPcGFjaXR5Om51bGw9PT0ocj1lKXx8dm9pZCAwPT09cj92b2lkIDA6ci5wcm9wZXJ0aWVzLmZpbGxPcGFjaXR5LGNvbG9yOm51bGw9PT0obj1lKXx8dm9pZCAwPT09bj92b2lkIDA6bi5wcm9wZXJ0aWVzLnN0cm9rZUNvbG9yLHdlaWdodDpudWxsPT09KGE9ZSl8fHZvaWQgMD09PWE/dm9pZCAwOmEucHJvcGVydGllcy5zdHJva2VXaWR0aCxvcGFjaXR5Om51bGw9PT0obz1lKXx8dm9pZCAwPT09bz92b2lkIDA6by5wcm9wZXJ0aWVzLnN0cm9rZU9wYWNpdHl9fSxwb2ludFRvTGF5ZXI6ZnVuY3Rpb24oZSx0KXtyZXR1cm4icmFkaXVzImluIGUucHJvcGVydGllcz9ERy5jaXJjbGUodCxlLnByb3BlcnRpZXMucmFkaXVzKTpERy5tYXJrZXIodCx7aWNvbjpmdW5jdGlvbihlKXtyZXR1cm4gREcuZGl2SWNvbih7aHRtbDoiPGRpdiBjbGFzcz0nYnVsbGV0LW1hcmtlcicgc3R5bGU9J2JvcmRlci1jb2xvcjogIitlKyI7Jz48L2Rpdj4iLGNsYXNzTmFtZToib3ZlcnJpZGUtZGVmYXVsdCIsaWNvblNpemU6WzIwLDIwXSxpY29uQW5jaG9yOlsxMCwxMF19KX0oZS5wcm9wZXJ0aWVzLmNvbG9yKX0pfSxvbkVhY2hGZWF0dXJlOmZ1bmN0aW9uKGUsdCl7ZS5wcm9wZXJ0aWVzLmRlc2NyaXB0aW9uJiZ0LmJpbmRQb3B1cChhKGUucHJvcGVydGllcy5kZXNjcmlwdGlvbikse2Nsb3NlQnV0dG9uOiEwLGNsb3NlT25Fc2NhcGVLZXk6ITB9KSxlLnByb3BlcnRpZXMudGl0bGUmJnQuYmluZFRvb2x0aXAoYShlLnByb3BlcnRpZXMudGl0bGUpLHtwZXJtYW5lbnQ6ITAsb3BhY2l0eToxLGNsYXNzTmFtZToicGVybWFuZW50LXRvb2x0aXAifSl9fSkuYWRkVG8oZSl9KX0pKCdbeyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsiZGVzY3JpcHRpb24iOiIiLCJzdHJva2VDb2xvciI6IiNmZDBkMGQiLCJzdHJva2VXaWR0aCI6Mywic3Ryb2tlT3BhY2l0eSI6MSwiekluZGV4IjoxfSwiZ2VvbWV0cnkiOnsidHlwZSI6IkxpbmVTdHJpbmciLCJjb29yZGluYXRlcyI6W1s2MC42MTgxMzgsNTYuODU3NTI1XSxbNjAuNjE3NzA5LDU2Ljg1NzM2NF0sWzYwLjYxNzQ0MSw1Ni44NTc1MTZdLFs2MC42MTcyNDgsNTYuODU3NjU3XSxbNjAuNjE2NjM2LDU2Ljg1NzU3NV0sWzYwLjYxNjExMSw1Ni44NTc1MzRdLFs2MC42MTU0ODgsNTYuODU3NDg3XSxbNjAuNjE1MTQ1LDU2Ljg1NzQ2NF0sWzYwLjYxNDkyLDU2Ljg1NzM1OF0sWzYwLjYyNzExOCw1Ni44NDc5MzFdLFs2MC42MjYzNzgsNTYuODQ3NjI1XSxbNjAuNjI3MjM2LDU2Ljg0Njk4Nl0sWzYwLjYyNjg2MSw1Ni44NDY4NTddXX0sImlkIjoyMzAzfSx7InR5cGUiOiJGZWF0dXJlIiwicHJvcGVydGllcyI6eyJkZXNjcmlwdGlvbiI6IiIsInN0cm9rZUNvbG9yIjoiIzFjMDFmZiIsInN0cm9rZVdpZHRoIjozLCJzdHJva2VPcGFjaXR5IjoxLCJ6SW5kZXgiOjJ9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiTGluZVN0cmluZyIsImNvb3JkaW5hdGVzIjpbWzYwLjYyMDcxOSw1Ni44NTUxMTNdLFs2MC42MTg3ODIsNTYuODU0NDQ3XSxbNjAuNjE1MDE2LDU2Ljg1NzM0Ml0sWzYwLjYxNTIwOSw1Ni44NTc0MjRdLFs2MC42MTcwMzMsNTYuODU3NTc5XSxbNjAuNjE3MjEsNTYuODU3NjE1XSxbNjAuNjE3MzY2LDU2Ljg1NzUwM10sWzYwLjYxNzY3Miw1Ni44NTczNDJdLFs2MC42MTc3MzYsNTYuODU3MzIxXSxbNjAuNjE3OTk5LDU2Ljg1NzQyMV1dfSwiaWQiOjMyNTB9LHsidHlwZSI6IkZlYXR1cmUiLCJwcm9wZXJ0aWVzIjp7ImNvbG9yIjoiIzAyODFmMiIsInRpdGxlIjoiMEw3UmhOQzQwWUVnMEwvUmdOQyswTFRRc05DMklDTFFrTkN5MFlMUXZ0QzgwTERRdXRHQjBMZ2kiLCJkZXNjcmlwdGlvbiI6IiIsInpJbmRleCI6MTAwMDAwMDAwMH0sImdlb21ldHJ5Ijp7InR5cGUiOiJQb2ludCIsImNvb3JkaW5hdGVzIjpbNjAuNjE4MzcsNTYuODU3NTE1XX0sImlkIjoyMDEzfSx7InR5cGUiOiJGZWF0dXJlIiwicHJvcGVydGllcyI6eyJjb2xvciI6IiMwMjgxZjIiLCJ0aXRsZSI6IjBZUFJnZEdDMExEUXZkQyswTExRdnRHSDBMM1JpOUM1SU5HRzBMWFF2ZEdDMFlBPSIsImRlc2NyaXB0aW9uIjoiUEhBKzBZUFJnZEdDMExEUXZkQyswTExRdnRHSDBMM1JpOUM1SU5HRzBMWFF2ZEdDMFlBZzBKTFF2dEdCMFlMUXZ0R0gwTDNRc05HUExDQTEwSkV2TVR3dmNEND0iLCJ6SW5kZXgiOjEwMDAwMDAwMDB9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6WzYwLjYyMDc2NSw1Ni44NTUxNTZdfSwiaWQiOjIxNTZ9LHsidHlwZSI6IkZlYXR1cmUiLCJwcm9wZXJ0aWVzIjp7ImNvbG9yIjoiIzAyODFmMiIsInRpdGxlIjoiMFlQUmdkR0MwTERRdmRDKzBMTFF2dEdIMEwzUmk5QzVJTkdHMExYUXZkR0MwWUE9IiwiZGVzY3JpcHRpb24iOiJQSEErMFlQUmdkR0MwTERRdmRDKzBMTFF2dEdIMEwzUmk5QzVJTkdHMExYUXZkR0MwWUFnMEtqUXNOR0EwWUxRc05HSTBZSFF1dEN3MFk4Z01qUFFrand2Y0Q0PSIsInpJbmRleCI6MTAwMDAwMDAwMH0sImdlb21ldHJ5Ijp7InR5cGUiOiJQb2ludCIsImNvb3JkaW5hdGVzIjpbNjAuNjI2OTksNTYuODQ2NzQ2XX0sImlkIjoyMTYwfV0nLCd7ImxhdCI6NTYuODUyMDY5NjQ5NTE0NzI1LCJsb24iOjYwLjYxNTAwNTQ5MzE2NDA3LCJ6b29tIjoxNH0nKTwvc2NyaXB0PjxzY3JpcHQgYXN5bmM9IiIgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tL2d0YWcvanM/aWQ9VUEtMTU4ODY2MTY4LTEiPjwvc2NyaXB0PjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4oZnVuY3Rpb24oZSl7ZnVuY3Rpb24gdCgpe2RhdGFMYXllci5wdXNoKGFyZ3VtZW50cyl9d2luZG93LmRhdGFMYXllcj13aW5kb3cuZGF0YUxheWVyfHxbXSx0KCJqcyIsbmV3IERhdGUpLHQoImNvbmZpZyIsZSksd2luZG93Lmd0YWc9dH0pKCdVQS0xNTg4NjYxNjgtMScpPC9zY3JpcHQ+PC9ib2R5Pg=="
-          );
-        </script>
+      <div class="b-companyContacts__map" id="map">
       </div>
-      <div class="_container">
-        <div class="b-companyContacts__items">
-          <div class="b-companyContacts__item">
-            <h3 class="b-companyContacts__title">Офис продаж:</h3>
-            <span class="b-companyContacts__place b-companyContacts__place_red">г. Екатеринбург</span>
+      <div class="b-companyContacts__mapPlaneTable" id="mapPlaneTable">
+      </div>
+      <div class="_container ">
+        <div class="b-companyContacts__items b-companyContacts__items_indent">
+          <div class="b-companyContacts__item b-companyContacts__itemPlace">
+            <h3 class="b-companyContacts__title b-companyContacts__title_indent">Офис продаж:</h3>
+            <span class="b-companyContacts__place b-companyContacts__place_blue">г. Екатеринбург</span>
             <span class="b-companyContacts__place">ул. Челюскинцев, 126</span>
           </div>
-          <div class="b-companyContacts__item">
-            <h3 class="b-companyContacts__title">Наш график:</h3>
+          <div class="b-companyContacts__item b-companyContacts__itemSchedule">
+            <h3 class="b-companyContacts__title b-companyContacts__title_indent">Наш график:</h3>
             <span class="b-companyContacts__schedule">пн-пт 9:30−19:00</span>
             <span class="b-companyContacts__schedule">сб 9:30−15:00</span>
             <span class="b-companyContacts__schedule">вс − выходной</span>
           </div>
-          <div class="b-companyContacts__item">
-            <h3 class="b-companyContacts__title">Напишите нам:</h3>
-            <div class="b-companyContacts__communicationWrap _communicationWrap">
+          <div class="b-companyContacts__item b-companyContacts__itemContact">
+            <h3 class="b-companyContacts__title b-companyContacts__title_indent">Напишите нам:</h3>
+            <div
+              class="b-companyContacts__communicationWrap b-companyContacts__communicationWrap_indent _communicationWrap">
               <a href="#" class="b-companyContacts__communication _communication"><span
-                  class="b-companyContacts__whatsAppIcon _communicationIcon"><img src="img/whatsapp/whatsapp.svg"
-                    alt="whatsapp" /></span>
+                  class="b-companyContacts__whatsAppIcon _communicationIcon"><img class=""
+                    src="img/whatsapp/whatsapp.svg" alt="whatsapp" /></span>
                 Написать в WhatsApp</a>
             </div>
             <div class="
-            b-companyContacts__communicationWrap b-companyContacts__communicationWrap_indent
+            b-companyContacts__communicationWrap 
             _communicationWrap
           ">
-              <a href="tel:+7(343)2885040" class="b-companyContacts__communication _communication"><span
-                  class="b-companyContacts__phoneIcon _communicationIcon _icon-phone"></span>Написать на почту info@avtomaxi.pro</a>
+              <a href="#" class="b-companyContacts__communication _communication"><span
+                  class="b-companyContacts__phoneIcon _communicationIcon _icon-email"></span>Написать на почту<br>
+                info@avtomaxi.pro</a>
             </div>
-            <div class="b-companyContacts__item">
-              <h3 class="b-companyContacts__title">Позвоните:</h3>
-              <div class="
-              b-companyContacts__communicationWrap b-companyContacts__communicationWrap_indent
-              _communicationWrap
-            ">
-                <a href="tel:+7(343)2885040" class="b-companyContacts__communication _communication"><span
-                    class="b-companyContacts__phoneIcon _communicationIcon"></span>+7 (343) 288 50 40</a>
-              </div>
-              <div class="
-              b-companyContacts__communicationWrap b-companyContacts__communicationWrap_indent
-              _communicationWrap
-            ">
-                <a href="tel:+7(343)2885040" class="b-companyContacts__communication _communication"><span
-                    class="b-companyContacts__phoneIcon _communicationIcon"></span>+7 (343) 288 50 40</a>
-              </div>
-            </div>
-
           </div>
-
-          <div class="b-companyContacts__item">
-            <p class="b-companyContacts__designation">Проезд от офиса продаж до установочного центра Восточная, 5Б/1.</p>
+          <div class="b-companyContacts__item b-companyContacts__itemTelephone">
+            <h3 class="b-companyContacts__title b-companyContacts__title_flex b-companyContacts__title_indent">
+              Позвоните:</h3>
+            <div class="
+            b-companyContacts__communicationPhone   b-companyContacts__communicationPhone_indent
+            _communicationWrap
+          ">
+              <a href="tel:+7(343)2885040" class="b-companyContacts__communication _communication">+7 (343) 288 50
+                40</a>
+            </div>
+            <div class="
+            b-companyContacts__communicationPhone
+            _communicationWrap
+          ">
+              <a href="tel:+7(922)2293813" class="b-companyContacts__communication _communication">+7 (922) 229 38
+                13</a>
+            </div>
+            <a href="#" class="b-companyContacts__RequestCall b-companyContacts__RequestCall_indent">заказать звонок</a>
+          </div>
+          <div class="b-companyContacts__item b-companyContacts__itemDesignation">
+            <p class="b-companyContacts__designation b-companyContacts__designation_indent">Проезд от офиса продаж до
+              установочного центра Восточная, 5Б/1.</p>
             <p class="b-companyContacts__designation">Проезд от офиса продаж до установочного центра Шарташская 23В.</p>
           </div>
         </div>
