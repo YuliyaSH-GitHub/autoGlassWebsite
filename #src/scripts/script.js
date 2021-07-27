@@ -1,6 +1,8 @@
 @@include('jquery/jquery.js')
+@@include('functions.js')
 @@include('burger.js')
 @@include('slider-swiper.js')
 @@include('input.js')
 @@include('products.js')
 @@include('map.js')
+@@include('submenu.js')

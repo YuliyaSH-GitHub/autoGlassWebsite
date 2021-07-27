@@ -45,7 +45,7 @@ details > summary::-webkit-details-marker {
   padding-bottom: 2px;
 }
 ._buttonLink:hover {
-  background-color: darken($colorLinkButton, 5%);
+  background-color: $colorDarkBlue;
 }
 
 ._sectionTitle {
@@ -70,9 +70,7 @@ details > summary::-webkit-details-marker {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  @media (min-width: $md4+px) {
 
-  }
   @media (min-width: $md2+px) {
     font-size: 16px;
   }
@@ -82,6 +80,56 @@ details > summary::-webkit-details-marker {
   margin: 0 15px 0 0;
   @media (min-width: $md2+px) {
     margin: 0 17px 0 0;
+  }
+}
+._communicationText {
+  &:hover {
+    color: $colorLinkButton;
+  }
+}
+._border {
+  border: 1px solid $colorLinkButton !important;
+}
+._hoverLink {
+  &:hover {
+    color: $colorLinkButton;
+  }
+}
+
+._catalogDatalist {
+  position: absolute;
+  top: 27px;
+  left: 0;
+  z-index: 10;
+  padding: 25px 15px;
+  width: 200px;
+  height: 230px;
+  overflow: auto;
+  background-color: $colorWhite;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.07);
+  display: none;
+  transition: all 0.3s ease 0s;
+  @media (min-width: $md3+px) {
+    display: block;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    transform: translate(0px, 10px);
+    pointer-events: none;
+  }
+
+  &__link {
+    font-size: 12px;
+    line-height: 14px;
+    width: 100%;
+    display: block;
+    color: $colorMain;
+    &:not(:last-child) {
+      padding-bottom: 15px;
+      border-bottom: 1px solid $colorFooterText;
+    }
+    &:not(:first-child) {
+      padding-top: 15px;
+    }
   }
 }
 

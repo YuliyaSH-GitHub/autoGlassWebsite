@@ -1,14 +1,11 @@
-window.onload = function () {
-    document.addEventListener("click", documentActions);
-}
 
-function documentActions(e) {
-    const targetElement = e.target;
-    if (targetElement.classList.contains('b-catalog__buttonShow')) {
-        getProducts(targetElement);
-        e.preventDefault();
-    }
-}
+let buttonShow = document.querySelector('.b-catalog__buttonShow');
+buttonShow.addEventListener("click", (event) => {
+    getProducts(buttonShow);
+    event.preventDefault();
+})
+
+
 
 // Load More Products
 async function getProducts(button) {

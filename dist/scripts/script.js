@@ -3238,6 +3238,66 @@
         return C.$ === S && (C.$ = Gt), e && C.jQuery === S && (C.jQuery = Vt), S
     }, "undefined" == typeof e && (C.jQuery = C.$ = S), S
 });
+var ua = window.navigator.userAgent;
+var msie = ua.indexOf("MSIE ");
+var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
+function isIE() {
+	ua = navigator.userAgent;
+	var is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
+	return is_ie;
+}
+if (isIE()) {
+	document.querySelector('html').classList.add('ie');
+}
+if (isMobile.any()) {
+	document.querySelector('html').classList.add('_touch');
+}
+
+function testWebP(callback) {
+	var webP = new Image();
+	webP.onload = webP.onerror = function () {
+		callback(webP.height == 2);
+	};
+	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+}
+testWebP(function (support) {
+	if (support === true) {
+		document.querySelector('html').classList.add('_webp');
+	} else {
+		document.querySelector('html').classList.add('_no-webp');
+	}
+});
+
+function ibg() {
+	if (isIE()) {
+		let ibg = document.querySelectorAll("._ibg");
+		for (var i = 0; i < ibg.length; i++) {
+			if (ibg[i].querySelector('img') && ibg[i].querySelector('img').getAttribute('src') != null) {
+				ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+			}
+		}
+	}
+}
+ibg();
+
+window.addEventListener("load", function () {
+	if (document.querySelector('.wrapper')) {
+		setTimeout(function () {
+			document.querySelector('.wrapper').classList.add('_loaded');
+		}, 0);
+	}
+});
+
+let unlock = true;
+
+//=================
+
+//RemoveClasses
+function _removeClasses(el, class_name) {
+	for (var i = 0; i < el.length; i++) {
+		el[i].classList.remove(class_name);
+	}
+}
 $(document).ready(function() {
   $('.b-header__burger').click(function(event) {
     $('.b-header__burger,.b-header__menu').toggleClass('active');
@@ -3260,24 +3320,50 @@ const swiper = new Swiper('.b-mainSlider__container', {
         pageUpDown: true,
     },
 });
-$(".b-catalog__input").on('focus',function() {
-    $(this).parent().addClass('b-catalog__inputDiv_border');
- });
+$(".b-catalog__input").on('focus', function () {
+   $(this).parent().addClass('b-catalog__inputDiv_border');
+   if (isMobile.any() && window.innerWidth <= 768) {
+      $(this).parent().addClass('_hoverMobile');
+   }
+   if (window.innerWidth > 768) {
+      $(this).parent().addClass('_hover');
+   }
 
- $(".b-catalog__input").on('blur',function() {
-    $(this).parent().removeClass('b-catalog__inputDiv_border');
- });
-window.onload = function () {
-    document.addEventListener("click", documentActions);
-}
+   $(this).siblings(".b-catalog__inputIcon").css('transform', 'rotate(-180deg)').css('transition', 'transform 0.6s ease 0s');
+});
 
-function documentActions(e) {
-    const targetElement = e.target;
-    if (targetElement.classList.contains('b-catalog__buttonShow')) {
-        getProducts(targetElement);
-        e.preventDefault();
-    }
-}
+$(".b-catalog__input").on('blur', function () {
+   $(this).parent().removeClass('b-catalog__inputDiv_border');
+   $(this).parent().removeClass('_hover');
+   $(this).parent().removeClass('_hoverMobile');
+   $(this).siblings(".b-catalog__inputIcon").css('transform', 'rotate(0deg)').css('transition', 'transform 0.6s ease 0s');
+});
+
+$(".b-catalog__inputEurocode").on('focus', function () {
+   $(this).parent().addClass('b-catalog__inputDiv_border');
+
+});
+
+$(".b-catalog__inputEurocode").on('blur', function () {
+   $(this).parent().removeClass('b-catalog__inputDiv_border');
+});
+
+
+$(".b-request__inputTel").on('focus', function () {
+   $(this).addClass('_border');
+});
+
+$(".b-request__inputTel").on('blur', function () {
+   $(this).removeClass('_border');
+});
+
+let buttonShow = document.querySelector('.b-catalog__buttonShow');
+buttonShow.addEventListener("click", (event) => {
+    getProducts(buttonShow);
+    event.preventDefault();
+})
+
+
 
 // Load More Products
 async function getProducts(button) {
@@ -3442,3 +3528,43 @@ DG.then(function () {
         });
 
 });
+window.onload = function () {
+    document.addEventListener("click", documentActions);
+}
+
+function documentActions(e) {
+    const targetElement = e.target;
+    if (window.innerWidth > 768) {
+        if (targetElement.classList.contains('_menuArrow')) {
+            targetElement.closest('._menuItem').classList.toggle('_hover');
+        }
+        if (!targetElement.closest('._menuItem') && document.querySelectorAll('._menuItem._hover').length > 0) {
+            _removeClasses(document.querySelectorAll('._menuItem._hover'), "_hover");
+        }
+
+        if (targetElement.classList.contains('_inputDiv')) {
+            targetElement.classList.toggle('_hover');
+        }
+
+        if (!targetElement.closest('._inputDiv') && document.querySelectorAll('._inputDiv._hover').length > 0) {
+            _removeClasses(document.querySelectorAll('._inputDiv._hover'), "_hover");
+        }
+    }
+    if (isMobile.any()) {
+        if (targetElement.classList.contains('_menuArrow')) {
+            targetElement.closest('._menuItem').classList.toggle('_hoverMobile');
+        }
+        if (!targetElement.closest('._menuItem') && document.querySelectorAll('._menuItem._hoverMobile').length > 0) {
+            _removeClasses(document.querySelectorAll('._menuItem._hoverMobile'), "_hoverMobile");
+        }
+
+
+        if (targetElement.classList.contains('_inputDiv')) {
+            targetElement.classList.toggle('_hoverMobile');
+        }
+
+        if (!targetElement.closest('._inputDiv') && document.querySelectorAll('._inputDiv._hoverMobile').length > 0) {
+            _removeClasses(document.querySelectorAll('._inputDiv._hoverMobile'), "_hoverMobile");
+        }
+    }
+}

@@ -10,7 +10,7 @@
   display: inline-block;
   background-color: $colorWhite;
   position: absolute;
-  z-index: 15;
+  z-index: 18;
   width: 100%;
   height: 3px;
   left: 0;
@@ -44,7 +44,7 @@ body.lock {
     width: 100%;
     height: 100%;
     background-color: $colorMain;
-    z-index: 7;
+    z-index: 17;
   }
 
   &__mainNav {
@@ -63,11 +63,14 @@ body.lock {
     height: 100%;
     top: -1000%;
     left: 0;
-    background-color: $colorMain;
+    color: $colorMain;
+    background-color: $colorWhite;
     overflow: auto;
     @media (min-width: $md3+px) {
+      background-color: $colorMain;
+      color: $colorWhite;
       position: relative;
-      z-index: 15;
+      z-index: 17;
       width: 100%;
       min-height: 40px;
       top: 0;
@@ -81,13 +84,16 @@ body.lock {
   &__menu.active {
     top: 0;
     z-index: 15;
+    @media (min-width: $md3+px) {
+      z-index: 18;
+    }
   }
   &__burger {
     display: block;
     position: relative;
     width: 26px;
     height: 17px;
-    z-index: 16;
+    z-index: 19;
 
     @media (min-width: $md3+px) {
       display: none;
@@ -128,12 +134,13 @@ body.lock {
   }
 
   &__menuList {
-    position: relative;
-    z-index: 15;
+    // position: relative;
     @extend %flexSpaceBetween;
     flex-direction: column;
-    align-items: center;
-    margin: 35px 0;
+    align-items: flex-start;
+    margin: 55px 0 35px 0;
+    z-index: 15;
+
     @media (min-width: $md3+px) {
       margin: 0;
       width: 100%;
@@ -145,17 +152,35 @@ body.lock {
 
   &__menuItem {
     position: relative;
-    margin: 35px 0 0 0;
+    width: 100%;
+    padding: 8px 0 8px 38px;
     @extend %flexSpaceBetween;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+
     @media (min-width: $md3+px) {
-      margin: 0px 5px;
-      padding: 5px 0px;
+      flex-direction: row;
+      align-items: center;
+    
+      padding: 12px 0px;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $colorFooterText;
+      @media (min-width: $md3+px) {
+        margin: 0 26px 0 0;
+        border-bottom: none;
+      }
     }
   }
-
-  &__menuLink {
+  &__menuItemLink {
     position: relative;
+
+    @media (min-width: $md3+px) {
+      margin: 8px 10px;
+    }
+  }
+  &__menuLink {
     color: inherit;
     @extend %linkHeader;
   }
@@ -163,45 +188,71 @@ body.lock {
     color: $colorLinkButton;
   }
   &__menuArrow {
+    position: absolute;
+    top: 30%;
+    right: -15px;
     color: inherit;
     font-size: 8px;
-    margin: 0 0 0 5px;
+    transition: all 0.3s ease 0s;
+    @media (min-width: $md3+px) {
+      right: -14px;
+    }
   }
 
   &__menuSub-list {
-    position: absolute;
-    top: 20px;
-
+    margin: 5px 0;
     z-index: 15;
-    width: 130px;
-    min-height: 150px;
-    background-color: $colorOrange;
-    @extend %flexSpaceBetween;
-    flex-direction: column;
-    align-items: center;
-    @media (min-width: $md3+px) {
-      top: 34px;
-      left: -28%;
+    width: 200px;
+    min-height: 50px;
+    background-color: $colorWhite;
+    color: $colorMain;
+    display: none;
+    transition: all 0.3s ease 0s;
+     @media (min-width: $md3+px) {
+      min-height: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 15px 7px;
+      position: absolute;
+      top: 52px;
+      left: 5px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.07);
+      display: block;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+      transform: translate(0px, 10px);
+      pointer-events: none;
     }
   }
-  &__menuSub-listFirst {
-    left: -150%;
-  }
-  &__menuSub-listSecond {
-    left: 60%;
-  }
+
   &__menuSub-item {
-    margin: 15px 0;
+    width: 100%;
+    padding: 5px 0;
+    @media (min-width: $md3+px) {
+      padding: 16px 0;
+    }
+    &:not(:last-child) {
+      @media (min-width: $md3+px) {
+        border-bottom: 1px solid $colorFooterText;
+      }
+    }
   }
 
   &__menuSub-link {
     color: inherit;
-    @extend %linkHeader;
+    font-size: 12px;
+    line-height: 120%;
+    text-align: left;
+    @media (min-width: $md3+px) {
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 
   &__actions {
     position: relative;
-    z-index: 15;
+    z-index: 19;
     @extend %flexSpaceBetween;
     min-height: 100%;
   }
@@ -251,9 +302,65 @@ body.lock {
     color: inherit;
     &_basket {
       display: none;
-      @media (min-width: $md3+px) {
+      @media (min-width: $md2+px) {
         display: block;
       }
     }
   }
+}
+
+._menuItem {
+  @media (any-hover: hover) {
+    &:hover {
+      .b-header__menuSub-list {
+        transform: translate(0px, 0px);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .b-header__menuArrow {
+        transform: rotate(-180deg);
+      }
+      .b-header__menuArrow,
+      .b-header__menuLink {
+        color: $colorLinkButton;
+      }
+    }
+  }
+
+  @media (min-width: $md3+px) {
+    &._hover {
+      .b-header__menuSub-list {
+        transform: translate(0px, 0px);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .b-header__menuArrow {
+        transform: rotate(-180deg);
+      }
+      .b-header__menuArrow,
+      .b-header__menuLink {
+        color: $colorLinkButton;
+      }
+    }
+  }
+
+  &._hoverMobile {
+    .b-header__menuSub-list {
+      transform: translate(0px, 0px);
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .b-header__menuArrow {
+      transform: rotate(-180deg);
+    }
+    .b-header__menuArrow,
+    .b-header__menuLink {
+      color: $colorLinkButton;
+    }
+  }
+
 }

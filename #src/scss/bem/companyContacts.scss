@@ -103,14 +103,18 @@
   }
 
   &__itemSchedule {
-    font-size: 16px;
-    line-height: 135%;
+    font-size: 14px;
+    line-height: 125%;
     grid-area: schedule;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    @media (min-width: $md2+px) {
+      font-size: 16px;
+      line-height: 135%;
+    }
   }
 
   &__itemContact {
@@ -163,9 +167,6 @@
 
   &__communication {
     text-align: left;
-    &:hover {
-      color: $colorLinkButton;
-    }
   }
 
   &__RequestCall {
@@ -220,7 +221,7 @@
       width: 60px;
       background-color: $colorDarkBlue;
       position: absolute;
-      top: 50%;
+      top: 30%;
       left: 0;
       z-index: 2;
     }

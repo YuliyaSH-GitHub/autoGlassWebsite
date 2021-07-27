@@ -21,9 +21,7 @@
     background-color: $colorMain;
   }
 
-  &_item {
-  }
-  &_item:last-child {
+  &__item:last-child {
     margin: 29px 0 0 0;
     @media (min-width: $md4+px) {
       margin: 32px 0 0 0;
@@ -57,8 +55,10 @@
   }
 
   &__inputTel {
+    box-sizing: border-box;
     padding: 11px 20px;
     width: 100%;
+    border: 1px solid $colorWhite;
     @media (min-width: $md4+px) {
       width: 200px/350px * 100%;
     }

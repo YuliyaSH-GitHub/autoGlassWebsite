@@ -89,10 +89,6 @@
     line-height: 143.5%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    &_colorRed {
-      display: block;
-      color: $colorOrange;
-    }
     @media (min-width: $md4+px) {
       font-size: 18px;
     }
@@ -102,5 +98,9 @@
     @media (min-width: $md2+px) {
       font-size: 40px;
     }
+  }
+  &__titleSpan_colorRed {
+    display: block;
+      color: $colorOrange;
   }
 }

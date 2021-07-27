@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.min.css" />
   <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-  <title>Document</title>
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <title>АВТОМАКСИ</title>
 </head>
 
 <body>
@@ -22,52 +23,59 @@
         </div>
         <div class="b-header__menu">
           <ul class="b-header__menuList">
-            <li class="b-header__menuItem">
-              <a href="" class="b-header__menuLink">Каталог</a>
-              <details class="b-header__menuSub">
-                <summary
-                  class="b-header__summary b-header__menuArrow _icon-polygon"
-                ></summary>
-                <ul class="b-header__menuSub-list b-header__menuSub-listFirst">
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Товар #1</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Товар #2</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Товар #3</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Товар #4</a>
-                  </li>
-                </ul>
-              </details>
+            <li class="b-header__menuItem _menuItem">
+              <div class="b-header__menuItemLink">
+                <a href="" class="b-header__menuLink">Каталог</a>
+                <button
+                  type="button"
+                  class="b-header__menuArrow _icon-polygon _menuArrow"
+                ></button>
+              </div>
+              <ul class="b-header__menuSub-list b-header__menuSub-listFirst">
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link">Лобовые стекла</a>
+                </li>
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link">Боковые стекла</a>
+                </li>
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link">Задние стекла</a>
+                </li>
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link"
+                    >Молдинги, датчики</a
+                  >
+                </li>
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link"
+                    >Товары для установки стекла</a
+                  >
+                </li>
+              </ul>
             </li>
             <li class="b-header__menuItem">
               <a href="" class="b-header__menuLink">О&nbsp;компании</a>
             </li>
-            <li class="b-header__menuItem">
-              <a href="" class="b-header__menuLink">Услуги</a>
-              <details class="b-header__menuSub">
-                <summary
-                  class="b-header__summary b-header__menuArrow _icon-polygon"
-                ></summary>
-                <ul class="b-header__menuSub-list b-header__menuSub-listSecond">
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Услуга #1</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Услуга #2</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Услуга #3</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Услуга #4</a>
-                  </li>
-                </ul>
-              </details>
+            <li class="b-header__menuItem _menuItem">
+              <div class="b-header__menuItemLink">
+                <a href="" class="b-header__menuLink">Услуги</a>
+                <button
+                  type="button"
+                  class="b-header__menuArrow _icon-polygon _menuArrow"
+                ></button>
+              </div>
+              <ul class="b-header__menuSub-list b-header__menuSub-listSecond">
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link"
+                    >Установка автостекла</a
+                  >
+                </li>
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link"
+                    >Ремонт сколов и трещин</a
+                  >
+                </li>
+              </ul>
             </li>
             <li class="b-header__menuItem">
               <a href="" class="b-header__menuLink">Партнерам</a>
@@ -98,81 +106,102 @@
       </nav>
     </div>
   </div>
-  <section class="b-header__contacts">
-    <div class="b-header__container _container">
-      <div class="b-header__contactsWrap">
-        <div class="b-header__contactItem b-header__contactItem_logoFlex">
-          <div class="b-header__logo b-header__logo_disposition">
-            <a href="" class="b-header__logoLinkImg"
+  <section class="b-contacts">
+    <div class="b-contacts__container _container">
+      <div class="b-contacts__contactsWrap">
+        <div class="b-contacts__contactItem b-contacts__contactItem_logoFlex">
+          <div class="b-contacts__logo b-contacts__logo_disposition">
+            <a href="" class="b-contacts__logoLinkImg"
               ><img
-                class="b-header__logoImg"
+                class="b-contacts__logoImg"
                 src="img/main/logo.png"
                 alt="logo"
             /></a>
-            <p class="b-header__nameСompany">Автомакси</p>
+            <p class="b-contacts__nameСompany">Автомакси</p>
           </div>
-          <p class="b-header__contactText">
+          <p class="b-contacts__contactText">
             Продаем и устанавливаем автостекла на любой вид автотранспорта с
             1995 года
           </p>
         </div>
-        <div class="b-header__contactItem b-header__contactItem_flex">
-          <div class="b-header__placeIcon _icon-place"></div>
-          <p class="b-header__placeText">
-            <span class="b-header__place">офис продаж:</span>
-            <span class="b-header__place b-header__place_red">г. Екатеринбург</span>
-            <span class="b-header__place">ул. Челюскинцев, 126</span>
+        <div class="b-contacts__contactItem b-contacts__contactItem_flex">
+          <div class="b-contacts__placeIcon _icon-place"></div>
+          <p class="b-contacts__placeText">
+            <span class="b-contacts__place">офис продаж:</span>
+            <span class="b-contacts__place b-contacts__place_red"
+              >г. Екатеринбург</span
+            >
+            <span class="b-contacts__place">ул. Челюскинцев, 126</span>
           </p>
         </div>
         <div
           class="
-            b-header__contactItem
-            b-header__contactItem_flex
-            b-header__contactItem_placeNone
+            b-contacts__contactItem
+            b-contacts__contactItem_flex
+            b-contacts__contactItem_placeNone
           "
         >
-          <div class="b-header__placeIcon _icon-place"></div>
-          <p class="b-header__placeText">
-            <span class="b-header__place">установочные центры:</span>
-            <span class="b-header__place">ул. Восточная, 5Б/1</span>
-            <span class="b-header__place">ул. Шарташская, 23В</span>
+          <div class="b-contacts__placeIcon _icon-place"></div>
+          <p class="b-contacts__placeText">
+            <span class="b-contacts__place">установочные центры:</span>
+            <span class="b-contacts__place">ул. Восточная, 5Б/1</span>
+            <span class="b-contacts__place">ул. Шарташская, 23В</span>
           </p>
         </div>
-        <div class="b-header__contactItem b-header__contactItem_scheduleNone">
-          <span class="b-header__schedule">пн-пт 9:30−19:00</span>
-          <span class="b-header__schedule">сб 9:30−15:00</span>
-          <span class="b-header__schedule">вс − выходной</span>
+        <div
+          class="b-contacts__contactItem b-contacts__contactItem_scheduleNone"
+        >
+          <span class="b-contacts__schedule">пн-пт 9:30−19:00</span>
+          <span class="b-contacts__schedule">сб 9:30−15:00</span>
+          <span class="b-contacts__schedule">вс − выходной</span>
         </div>
-        <address class="b-header__contactItem b-header__contactItem_phoneFlex">
-          <div class="b-header__phoneFlexDiv">
-            <a href="tel:+7(343)2885040"  target="_blank" class="b-header__phone"
+        <address
+          class="b-contacts__contactItem b-contacts__contactItem_phoneFlex"
+        >
+          <div class="b-contacts__phoneFlexDiv _menuItem">
+            <a
+              href="tel:+7(343)2885040"
+              target="_blank"
+              class="b-contacts__phone _hoverLink"
               >+7 (343) 288 50 40</a
             >
-            <details class="b-header__menuPhone">
-              <summary
-                class="b-header__summary b-header__menuPhoneArrow _icon-polygon"
-              ></summary>
-              <ul class="b-header__menuPhone-list">
-                <li class="b-header__menuPhone-item">
-                  <a href="tel:+7(343)2885040"  target="_blank" class="b-header__menuPhone-link"
-                    >+7 (343) 288 52 41</a
-                  >
-                </li>
-                <li class="b-header__menuPhone-item">
-                  <a href="tel:+7(343)2885040"  target="_blank" class="b-header__menuPhone-link"
-                    >+7 (343) 288 53 42</a
+              <button
+                type="button"
+                class="
+                 b-contacts__menuPhoneArrow
+                  _menuArrow
+                  _icon-polygon
+                "
+              ></button>
+              <ul class="b-contacts__menuPhone-list">
+                <li class="b-contacts__menuPhone-item ">
+                  <a
+                    href="tel:+7(922)2293813"
+                    target="_blank"
+                    class="b-contacts__menuPhone-link _hoverLink"
+                    >+7 (922)229 38 13</a
                   >
                 </li>
               </ul>
-            </details>
           </div>
           <div class="_whatsAppWrap">
-            <a href="#"  target="_blank" class="b-header__communication _communication"
-              ><span class="b-header__whatsAppIcon  _communicationIcon _icon-whatsapp"></span> <span class="b-header__whatsAppText">Написать в
-                WhatsApp</span></a
+            <a
+              href="#"
+              target="_blank"
+              class="b-contacts__communication _communication"
+              ><span
+                class="
+                  b-contacts__whatsAppIcon
+                  _communicationIcon
+                  _icon-whatsapp
+                "
+              ></span>
+              <span class="b-contacts__whatsAppText _hoverLink"
+                >Написать в WhatsApp</span
+              ></a
             >
           </div>
-          <a href="#" class="b-header__call">заказать звонок</a>
+          <a href="#" class="b-contacts__call">заказать звонок</a>
         </address>
       </div>
     </div>
@@ -190,7 +219,10 @@
                   <p class="b-mainSlider__text">при покупке стекла у нас</p>
                   <h1 class="b-mainSlider__title">
                     установка стекла
-                    <span class="b-mainSlider__title_colorRed">со скидкой 10%</span>
+                    <span class="
+                          b-mainSlider__titleSpan
+                          b-mainSlider__titleSpan_colorRed
+                        ">со скидкой 10%</span>
                   </h1>
                 </div>
                 <img class="b-mainSlider__image" src="img/main/img01.png" alt="image" />
@@ -203,23 +235,23 @@
         <div class="b-services__list">
           <div class="b-services__item">
             <div class="b-services__itemIcon _icon-check"></div>
-            <h3 class="b-services__listTitle">Работаем со стеклами 26 лет</h3>
+            <h2 class="b-services__listTitle">Работаем со стеклами 26 лет</h2>
             <p class="b-services__listText">
               Профессионально устанавливаем и ремонтируем автостекла.
             </p>
           </div>
           <div class="b-services__item">
             <div class="b-services__itemIcon _icon-check"></div>
-            <h3 class="b-services__listTitle">Выгодные цены на автостекла</h3>
+            <h2 class="b-services__listTitle">Выгодные цены на автостекла</h2>
             <p class="b-services__listText">
               Сотрудничаем напрямую с производителями, без посредников.
             </p>
           </div>
           <div class="b-services__item">
             <div class="b-services__itemIcon _icon-check"></div>
-            <h3 class="b-services__listTitle">
+            <h2 class="b-services__listTitle">
               В наличии более 15 000 стекол
-            </h3>
+            </h2>
             <p class="b-services__listText">
               Для иномарок и отечественных автомобилей.
             </p>
@@ -273,20 +305,49 @@
           Каталог автостекла
         </h2>
         <div class="b-catalog__inputContainer">
-          <div class="b-catalog__inputDiv">
+          <div class="b-catalog__inputDiv _inputDiv">
             <input class="b-catalog__input" type="text" name="glassType" placeholder="Укажите вид стекла" />
+            <div class="_catalogDatalist">
+              <a class="_catalogDatalist__link _hoverLink" href="#">Лобовые стекла</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Боковые стекла</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Задние стекла</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Молдинги, датчики</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Товары для установки стекла</a>
+            </div>
             <div class="b-catalog__inputIcon _icon-arrow-down"></div>
           </div>
-          <div class="b-catalog__inputDiv b-catalog__inputDiv_back">
+          <div class="b-catalog__inputDiv _inputDiv b-catalog__inputDiv_back">
             <input class="b-catalog__input b-catalog__input_back" type="text" name="glassType" placeholder="Марка" />
-            <div class="_icon-arrow-down"></div>
+            <div class="_catalogDatalist">
+              <a class="_catalogDatalist__link _hoverLink" href="#">Audi</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">BMW</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Chery</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Chevrolet</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Citroen</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Daewoo</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Datsun</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Fiat</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Ford</a>
+            </div>
+            <div class="b-catalog__inputIcon _icon-arrow-down"></div>
           </div>
-          <div class="b-catalog__inputDiv b-catalog__inputDiv_back">
+          <div class="b-catalog__inputDiv _inputDiv b-catalog__inputDiv_back">
             <input class="b-catalog__input b-catalog__input_back" type="text" name="glassType" placeholder="Модель" />
-            <div class="_icon-arrow-down"></div>
+            <div class="_catalogDatalist">
+              <a class="_catalogDatalist__link _hoverLink" href="#">Focus</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Fusion</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Galaxy</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Granada</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">KA</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Kuga</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Maverick</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Mondeo</a>
+              <a class="_catalogDatalist__link _hoverLink" href="#">Mustang</a>
+            </div>
+            <div class="b-catalog__inputIcon _icon-arrow-down"></div>
           </div>
           <div class="b-catalog__inputDiv">
-            <input class="b-catalog__input" type="text" name="glassType" placeholder="Или укажите еврокод" />
+            <input class="b-catalog__inputEurocode" type="text" name="glassType" placeholder="Или укажите еврокод" />
           </div>
           <a class="b-catalog__buttonSearch _buttonLink" href="#">Подобрать</a>
         </div>
@@ -337,7 +398,7 @@
           Товары для установки автостекла
         </h2>
         <div class="b-goods__items b-goods__items_indent">
-          <article class="b-goods__item b-goods__item_indent">
+          <div class="b-goods__item b-goods__item_indent">
             <img class="b-goods__img" src="img/goods/img1.png" alt="good" />
             <p class="b-goods__text b-goods__text_indent">
               Бур ТВС РФ - комплект (5 шт)
@@ -346,16 +407,16 @@
               <span class="b-goods__price">3000 руб.</span>
               <a class="b-goods__buyLink b-goods__buyLink_indent _buttonLink" href="#">Купить</a>
             </div>
-          </article>
-          <article class="b-goods__item b-goods__item_indent">
+          </div>
+          <div class="b-goods__item b-goods__item_indent">
             <img class="b-goods__img" src="img/goods/img2.png" alt="good" />
             <p class="b-goods__text b-goods__text_indent">Инжектор РФ</p>
             <div class="b-goods__priceWrap">
               <span class="b-goods__price">5000 руб.</span>
               <a class="b-goods__buyLink b-goods__buyLink_indent _buttonLink" href="#">Купить</a>
             </div>
-          </article>
-          <article class="b-goods__item b-goods__item_indent">
+          </div>
+          <div class="b-goods__item b-goods__item_indent">
             <img class="b-goods__img" src="img/goods/img3.png" alt="good" />
             <p class="b-goods__text b-goods__text_indent">
               Клей JETA PRO, 600 мл, 1-часовой, пр-во Европа
@@ -364,8 +425,8 @@
               <span class="b-goods__price">400 руб.</span>
               <a class="b-goods__buyLink b-goods__buyLink_indent _buttonLink" href="#">Купить</a>
             </div>
-          </article>
-          <article class="b-goods__item b-goods__item_indent">
+          </div>
+          <div class="b-goods__item b-goods__item_indent">
             <img class="b-goods__img" src="img/goods/img1.png" alt="good" />
             <p class="b-goods__text b-goods__text_indent">
               Бур ТВС РФ - комплект (5 шт)
@@ -374,7 +435,7 @@
               <span class="b-goods__price">3000 руб.</span>
               <a class="b-goods__buyLink b-goods__buyLink_indent _buttonLink" href="#">Купить</a>
             </div>
-          </article>
+          </div>
         </div>
         <a class="b-goods__link _buttonLink" href="#">Перейти в каталог</a>
       </section>
@@ -410,7 +471,7 @@
                 class="b-comments__show">Посмотреть</span></a>
           </div>
           <div class="b-comments__item">
-            <a href="https://www.google.com/maps" target="_blank" class="b-comments__service"><img
+            <a href="https://www.google.com/maps/" target="_blank" class="b-comments__service"><img
                 class="b-comments__serviceImg" src="img/comments/img3.png" alt="google maps" /></a>
             <div class="b-rating b-rating_indent">
               <span class="b-rating__star active"></span>
@@ -420,7 +481,7 @@
               <span class="b-rating__star"></span>
               <span class="b-rating__result">4,0</span>
             </div>
-            <a href="https://www.google.com/map" target="_blank" class="b-comments__link _icon-new-window"><span
+            <a href="https://www.google.com/maps/" target="_blank" class="b-comments__link _icon-new-window"><span
                 class="b-comments__show">Посмотреть</span></a>
           </div>
           <div class="b-comments__item">
@@ -440,7 +501,7 @@
         </div>
       </section>
       <section class="b-request b-request_indent b-request_back">
-        <div class="b-request_item">
+        <div class="b-request__item">
           <h2 class="b-request__title b-request__title_indent _sectionTitle">
             Оставить заявку
           </h2>
@@ -457,7 +518,7 @@
             Политикой конфиденциальности
           </p>
         </div>
-        <div class="b-request_item">
+        <div class="b-request__item">
           <h2 class="b-request__title _sectionTitle">
             Или свяжитесь с нами самостоятельно
           </h2>
@@ -466,79 +527,104 @@
                 _communicationWrap
               ">
             <a href="tel:+7(343)2885040" class="b-request__communication _communication"><span
-                class="b-request__phoneIcon _communicationIcon _icon-phone"></span>+7 (343) 288 50 40</a>
+                class="b-request__phoneIcon _communicationIcon _icon-phone"></span><span class="_communicationText">+7
+                (343) 288 50 40</span></a>
           </div>
           <div class="b-request__communicationWrap _communicationWrap">
             <a href="#" class="b-request__communication _communication"><span
                 class="b-request__whatsAppIcon _communicationIcon"><img src="img/whatsapp/whatsapp.svg"
                   alt="whatsapp" /></span>
-              Написать в WhatsApp</a>
+              <span class="_communicationText">Написать в WhatsApp</span></a>
           </div>
         </div>
       </section>
     </div>
     <section class="b-companyContacts">
-      <div class="b-companyContacts__map" id="map">
-      </div>
-      <div class="b-companyContacts__mapPlaneTable" id="mapPlaneTable">
-      </div>
-      <div class="_container ">
+      <div class="b-companyContacts__map" id="map"></div>
+      <div class="b-companyContacts__mapPlaneTable" id="mapPlaneTable"></div>
+      <div class="_container">
         <div class="b-companyContacts__items b-companyContacts__items_indent">
           <div class="b-companyContacts__item b-companyContacts__itemPlace">
-            <h3 class="b-companyContacts__title b-companyContacts__title_indent">Офис продаж:</h3>
+            <h3 class="b-companyContacts__title b-companyContacts__title_indent">
+              Офис продаж:
+            </h3>
             <span class="b-companyContacts__place b-companyContacts__place_blue">г. Екатеринбург</span>
             <span class="b-companyContacts__place">ул. Челюскинцев, 126</span>
           </div>
           <div class="b-companyContacts__item b-companyContacts__itemSchedule">
-            <h3 class="b-companyContacts__title b-companyContacts__title_indent">Наш график:</h3>
+            <h3 class="b-companyContacts__title b-companyContacts__title_indent">
+              Наш график:
+            </h3>
             <span class="b-companyContacts__schedule">пн-пт 9:30−19:00</span>
             <span class="b-companyContacts__schedule">сб 9:30−15:00</span>
             <span class="b-companyContacts__schedule">вс − выходной</span>
           </div>
           <div class="b-companyContacts__item b-companyContacts__itemContact">
-            <h3 class="b-companyContacts__title b-companyContacts__title_indent">Напишите нам:</h3>
-            <div
-              class="b-companyContacts__communicationWrap b-companyContacts__communicationWrap_indent _communicationWrap">
+            <h3 class="b-companyContacts__title b-companyContacts__title_indent">
+              Напишите нам:
+            </h3>
+            <div class="
+                  b-companyContacts__communicationWrap
+                  b-companyContacts__communicationWrap_indent
+                  _communicationWrap
+                ">
               <a href="#" class="b-companyContacts__communication _communication"><span
                   class="b-companyContacts__whatsAppIcon _communicationIcon"><img class=""
                     src="img/whatsapp/whatsapp.svg" alt="whatsapp" /></span>
-                Написать в WhatsApp</a>
+                <span class="_communicationText">Написать в WhatsApp</span></a>
             </div>
-            <div class="
-            b-companyContacts__communicationWrap 
-            _communicationWrap
-          ">
-              <a href="#" class="b-companyContacts__communication _communication"><span
-                  class="b-companyContacts__phoneIcon _communicationIcon _icon-email"></span>Написать на почту<br>
-                info@avtomaxi.pro</a>
+            <div class="b-companyContacts__communicationWrap _communicationWrap">
+              <a href="#" class="b-companyContacts__communication _communication"><span class="
+                      b-companyContacts__phoneIcon
+                      _communicationIcon
+                      _icon-email
+                    "></span><span class="_communicationText">Написать на почту<br />
+                  info@avtomaxi.pro</span></a>
             </div>
           </div>
           <div class="b-companyContacts__item b-companyContacts__itemTelephone">
-            <h3 class="b-companyContacts__title b-companyContacts__title_flex b-companyContacts__title_indent">
-              Позвоните:</h3>
+            <h3 class="
+                  b-companyContacts__title
+                  b-companyContacts__title_flex
+                  b-companyContacts__title_indent
+                ">
+              Позвоните:
+            </h3>
             <div class="
-            b-companyContacts__communicationPhone   b-companyContacts__communicationPhone_indent
-            _communicationWrap
-          ">
-              <a href="tel:+7(343)2885040" class="b-companyContacts__communication _communication">+7 (343) 288 50
-                40</a>
+                  b-companyContacts__communicationPhone
+                  b-companyContacts__communicationPhone_indent
+                  _communicationWrap
+                ">
+              <a href="tel:+7(343)2885040" class="
+                    b-companyContacts__communication
+                    _communication
+                    _communicationText
+                  ">+7 (343) 288 50 40</a>
             </div>
-            <div class="
-            b-companyContacts__communicationPhone
-            _communicationWrap
-          ">
-              <a href="tel:+7(922)2293813" class="b-companyContacts__communication _communication">+7 (922) 229 38
-                13</a>
+            <div class="b-companyContacts__communicationPhone _communicationWrap">
+              <a href="tel:+7(922)2293813" class="
+                    b-companyContacts__communication
+                    _communication
+                    _communicationText
+                  ">+7 (922) 229 38 13</a>
             </div>
-            <a href="#" class="b-companyContacts__RequestCall b-companyContacts__RequestCall_indent">заказать звонок</a>
+            <a href="#" class="
+                  b-companyContacts__RequestCall
+                  b-companyContacts__RequestCall_indent
+                ">заказать звонок</a>
           </div>
           <div class="b-companyContacts__item b-companyContacts__itemDesignation">
-            <p class="b-companyContacts__designation b-companyContacts__designation_indent">Проезд от офиса продаж до
-              установочного центра Восточная, 5Б/1.</p>
-            <p class="b-companyContacts__designation">Проезд от офиса продаж до установочного центра Шарташская 23В.</p>
+            <p class="
+                  b-companyContacts__designation
+                  b-companyContacts__designation_indent
+                ">
+              Проезд от офиса продаж до установочного центра Восточная, 5Б/1.
+            </p>
+            <p class="b-companyContacts__designation">
+              Проезд от офиса продаж до установочного центра Шарташская 23В.
+            </p>
           </div>
         </div>
-      </div>
       </div>
     </section>
   </main>
@@ -593,15 +679,27 @@
           >Политика конфиденциальности</a
         >
       </div>
-      <div class="b-footer__design b-footer__design_indent b-footer__designText_textDecor">
+      <div
+        class="
+          b-footer__design
+          b-footer__design_indent
+          b-footer__designTex
+          b-footer__designText_textDecor
+        "
+      >
         <span class="b-footer__designSpan">Дизайн: </span
         ><a class="b-footer__designLink" href="#">loginova.me</a>
+        <div class="b-footer__designSpan">Верстка: Шишова Ю.Г.</div>
       </div>
-      <p class="b-footer__text b-footer__designText_textDecor">
-        Использование материалов с данного сайта, разрешена только по согласию
-        с владельцем. Вся информация предоставленная на сайте ни при каких
-        условиях не является публичной офертой, определяемой положениями
-        Статьи 437 (2) Гражданского кодекса РФ
+      <p
+        class="
+          b-footer__text b-footer__designTex b-footer__designText_textDecor
+        "
+      >
+        Использование материалов с данного сайта, разрешена только по согласию с
+        владельцем. Вся информация предоставленная на сайте ни при каких
+        условиях не является публичной офертой, определяемой положениями Статьи
+        437 (2) Гражданского кодекса РФ
       </p>
     </div>
   </div>

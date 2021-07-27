@@ -7,52 +7,59 @@
         </div>
         <div class="b-header__menu">
           <ul class="b-header__menuList">
-            <li class="b-header__menuItem">
-              <a href="" class="b-header__menuLink">Каталог</a>
-              <details class="b-header__menuSub">
-                <summary
-                  class="b-header__summary b-header__menuArrow _icon-polygon"
-                ></summary>
-                <ul class="b-header__menuSub-list b-header__menuSub-listFirst">
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Товар #1</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Товар #2</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Товар #3</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Товар #4</a>
-                  </li>
-                </ul>
-              </details>
+            <li class="b-header__menuItem _menuItem">
+              <div class="b-header__menuItemLink">
+                <a href="" class="b-header__menuLink">Каталог</a>
+                <button
+                  type="button"
+                  class="b-header__menuArrow _icon-polygon _menuArrow"
+                ></button>
+              </div>
+              <ul class="b-header__menuSub-list b-header__menuSub-listFirst">
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link">Лобовые стекла</a>
+                </li>
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link">Боковые стекла</a>
+                </li>
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link">Задние стекла</a>
+                </li>
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link"
+                    >Молдинги, датчики</a
+                  >
+                </li>
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link"
+                    >Товары для установки стекла</a
+                  >
+                </li>
+              </ul>
             </li>
             <li class="b-header__menuItem">
               <a href="" class="b-header__menuLink">О&nbsp;компании</a>
             </li>
-            <li class="b-header__menuItem">
-              <a href="" class="b-header__menuLink">Услуги</a>
-              <details class="b-header__menuSub">
-                <summary
-                  class="b-header__summary b-header__menuArrow _icon-polygon"
-                ></summary>
-                <ul class="b-header__menuSub-list b-header__menuSub-listSecond">
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Услуга #1</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Услуга #2</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Услуга #3</a>
-                  </li>
-                  <li class="b-header__menuSub-item">
-                    <a href="" class="b-header__menuSub-link">Услуга #4</a>
-                  </li>
-                </ul>
-              </details>
+            <li class="b-header__menuItem _menuItem">
+              <div class="b-header__menuItemLink">
+                <a href="" class="b-header__menuLink">Услуги</a>
+                <button
+                  type="button"
+                  class="b-header__menuArrow _icon-polygon _menuArrow"
+                ></button>
+              </div>
+              <ul class="b-header__menuSub-list b-header__menuSub-listSecond">
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link"
+                    >Установка автостекла</a
+                  >
+                </li>
+                <li class="b-header__menuSub-item _hoverLink">
+                  <a href="" class="b-header__menuSub-link"
+                    >Ремонт сколов и трещин</a
+                  >
+                </li>
+              </ul>
             </li>
             <li class="b-header__menuItem">
               <a href="" class="b-header__menuLink">Партнерам</a>
@@ -83,81 +90,102 @@
       </nav>
     </div>
   </div>
-  <section class="b-header__contacts">
-    <div class="b-header__container _container">
-      <div class="b-header__contactsWrap">
-        <div class="b-header__contactItem b-header__contactItem_logoFlex">
-          <div class="b-header__logo b-header__logo_disposition">
-            <a href="" class="b-header__logoLinkImg"
+  <section class="b-contacts">
+    <div class="b-contacts__container _container">
+      <div class="b-contacts__contactsWrap">
+        <div class="b-contacts__contactItem b-contacts__contactItem_logoFlex">
+          <div class="b-contacts__logo b-contacts__logo_disposition">
+            <a href="" class="b-contacts__logoLinkImg"
               ><img
-                class="b-header__logoImg"
+                class="b-contacts__logoImg"
                 src="img/main/logo.png"
                 alt="logo"
             /></a>
-            <p class="b-header__nameСompany">Автомакси</p>
+            <p class="b-contacts__nameСompany">Автомакси</p>
           </div>
-          <p class="b-header__contactText">
+          <p class="b-contacts__contactText">
             Продаем и устанавливаем автостекла на любой вид автотранспорта с
             1995 года
           </p>
         </div>
-        <div class="b-header__contactItem b-header__contactItem_flex">
-          <div class="b-header__placeIcon _icon-place"></div>
-          <p class="b-header__placeText">
-            <span class="b-header__place">офис продаж:</span>
-            <span class="b-header__place b-header__place_red">г. Екатеринбург</span>
-            <span class="b-header__place">ул. Челюскинцев, 126</span>
+        <div class="b-contacts__contactItem b-contacts__contactItem_flex">
+          <div class="b-contacts__placeIcon _icon-place"></div>
+          <p class="b-contacts__placeText">
+            <span class="b-contacts__place">офис продаж:</span>
+            <span class="b-contacts__place b-contacts__place_red"
+              >г. Екатеринбург</span
+            >
+            <span class="b-contacts__place">ул. Челюскинцев, 126</span>
           </p>
         </div>
         <div
           class="
-            b-header__contactItem
-            b-header__contactItem_flex
-            b-header__contactItem_placeNone
+            b-contacts__contactItem
+            b-contacts__contactItem_flex
+            b-contacts__contactItem_placeNone
           "
         >
-          <div class="b-header__placeIcon _icon-place"></div>
-          <p class="b-header__placeText">
-            <span class="b-header__place">установочные центры:</span>
-            <span class="b-header__place">ул. Восточная, 5Б/1</span>
-            <span class="b-header__place">ул. Шарташская, 23В</span>
+          <div class="b-contacts__placeIcon _icon-place"></div>
+          <p class="b-contacts__placeText">
+            <span class="b-contacts__place">установочные центры:</span>
+            <span class="b-contacts__place">ул. Восточная, 5Б/1</span>
+            <span class="b-contacts__place">ул. Шарташская, 23В</span>
           </p>
         </div>
-        <div class="b-header__contactItem b-header__contactItem_scheduleNone">
-          <span class="b-header__schedule">пн-пт 9:30−19:00</span>
-          <span class="b-header__schedule">сб 9:30−15:00</span>
-          <span class="b-header__schedule">вс − выходной</span>
+        <div
+          class="b-contacts__contactItem b-contacts__contactItem_scheduleNone"
+        >
+          <span class="b-contacts__schedule">пн-пт 9:30−19:00</span>
+          <span class="b-contacts__schedule">сб 9:30−15:00</span>
+          <span class="b-contacts__schedule">вс − выходной</span>
         </div>
-        <address class="b-header__contactItem b-header__contactItem_phoneFlex">
-          <div class="b-header__phoneFlexDiv">
-            <a href="tel:+7(343)2885040"  target="_blank" class="b-header__phone"
+        <address
+          class="b-contacts__contactItem b-contacts__contactItem_phoneFlex"
+        >
+          <div class="b-contacts__phoneFlexDiv _menuItem">
+            <a
+              href="tel:+7(343)2885040"
+              target="_blank"
+              class="b-contacts__phone _hoverLink"
               >+7 (343) 288 50 40</a
             >
-            <details class="b-header__menuPhone">
-              <summary
-                class="b-header__summary b-header__menuPhoneArrow _icon-polygon"
-              ></summary>
-              <ul class="b-header__menuPhone-list">
-                <li class="b-header__menuPhone-item">
-                  <a href="tel:+7(343)2885040"  target="_blank" class="b-header__menuPhone-link"
-                    >+7 (343) 288 52 41</a
-                  >
-                </li>
-                <li class="b-header__menuPhone-item">
-                  <a href="tel:+7(343)2885040"  target="_blank" class="b-header__menuPhone-link"
-                    >+7 (343) 288 53 42</a
+              <button
+                type="button"
+                class="
+                 b-contacts__menuPhoneArrow
+                  _menuArrow
+                  _icon-polygon
+                "
+              ></button>
+              <ul class="b-contacts__menuPhone-list">
+                <li class="b-contacts__menuPhone-item ">
+                  <a
+                    href="tel:+7(922)2293813"
+                    target="_blank"
+                    class="b-contacts__menuPhone-link _hoverLink"
+                    >+7 (922)229 38 13</a
                   >
                 </li>
               </ul>
-            </details>
           </div>
           <div class="_whatsAppWrap">
-            <a href="#"  target="_blank" class="b-header__communication _communication"
-              ><span class="b-header__whatsAppIcon  _communicationIcon _icon-whatsapp"></span> <span class="b-header__whatsAppText">Написать в
-                WhatsApp</span></a
+            <a
+              href="#"
+              target="_blank"
+              class="b-contacts__communication _communication"
+              ><span
+                class="
+                  b-contacts__whatsAppIcon
+                  _communicationIcon
+                  _icon-whatsapp
+                "
+              ></span>
+              <span class="b-contacts__whatsAppText _hoverLink"
+                >Написать в WhatsApp</span
+              ></a
             >
           </div>
-          <a href="#" class="b-header__call">заказать звонок</a>
+          <a href="#" class="b-contacts__call">заказать звонок</a>
         </address>
       </div>
     </div>
