@@ -2,6 +2,9 @@
   &_indent {
     transition: padding 0.8s ease 0s;
     padding: 50px 0 0 0;
+
+    overflow: hidden;
+
     @media (min-width: $md4+px) {
       padding: 68px 0 0 0;
     }
